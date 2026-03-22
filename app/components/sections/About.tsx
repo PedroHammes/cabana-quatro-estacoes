@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function About() {
-  return <section id="about">
+  return <section id="about" className="px-6 py-16 md:px-12">
     <div>
         <h1>SOBRE</h1>
     </div>

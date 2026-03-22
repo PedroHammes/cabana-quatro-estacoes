@@ -31,7 +31,7 @@ export default function Testimonials() {
             image: "/images/20260315_180605.jpg"
         }
     ]
-  return <section id="testimonials">
+  return <section id="testimonials" className="px-6 py-16 md:px-12">
     <h1>DEPOIMENTOS</h1>
         <Carousel className="flex flex-col md:flex-row">
             <CarouselContent>

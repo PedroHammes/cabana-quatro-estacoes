@@ -17,7 +17,7 @@ export default function Structure() {
         { title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://lh3.googleusercontent.com/p/AF1QipO8kfGvD5_52vBDjP31lEpaFGxjxO_jyOB-JIix=w154-h258-n-k-no-nu"
         }
     ]
-  return <section id="structure">
+  return <section id="structure" className="px-6 py-16 md:px-12">
     <Carousel>
         <CarouselContent>
             {

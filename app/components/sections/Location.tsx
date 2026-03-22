@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function Location() {
-  return <section id="location">
+  return <section id="location" className="px-6 py-16 md:px-12">
     <h1>LOCALIZAÇÃO</h1>
     <div className="
     flex flex-col md:flex-row

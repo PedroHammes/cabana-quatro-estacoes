@@ -31,7 +31,7 @@ export default function Partnerships() {
         }
     ]
 
-    return <section id="partnerships">
+    return <section id="partnerships" className="px-6 py-16 md:px-12">
         <div>
             <h1>PARCERIAS</h1>
         </div>

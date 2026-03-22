@@ -17,7 +17,7 @@ export default function Team() {
             image: "/images/20260315_181247.jpg"
         }
     ]
-  return <section id="team">
+  return <section id="team" className="px-6 py-16 md:px-12">
     <h1>EQUIPE</h1>
     <div className="
     flex flex-col md:flex-row">

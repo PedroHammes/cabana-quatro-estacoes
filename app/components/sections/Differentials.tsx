@@ -8,7 +8,7 @@ export default function Differentials() {
         {title: "Cozinh", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "/images/20260316_105845.jpg"},
         {title: "Quarto", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "/images/20260316_105845.jpg"}
     ]
-  return <section id="differentials">
+  return <section id="differentials" className="px-6 py-16 md:px-12">
     <Carousel>
         <CarouselContent>
             {
