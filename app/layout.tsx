@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Ubuntu } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: "Cabana Quatro Estações",
@@ -11,6 +12,11 @@ export const viewport = {
   initialScale: 1,
 }
 
+const ubuntu = Ubuntu({
+    subsets: ['latin'],
+    weight: ['300', '400', '700']
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased`}
+      className={`h-full antialiased ${ubuntu.className}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
