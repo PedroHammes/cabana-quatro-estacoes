@@ -15,6 +15,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar1Icon } from "lucide-react"
 import { format } from "date-fns"
 import { Calendar } from "@/components/ui/calendar"
+import { WHATSAPP_NUMBER } from "@/lib/constants"
 
 export default function Availability(Props: {open: boolean, setOpen: (value: boolean) => void}) {
 
@@ -27,7 +28,7 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
       return
     }
     const message = `Nome: ${name}%0ADatas: ${format(date!.from!, "dd/MM/yyyy")} a ${format(date!.to!, "dd/MM/yyyy")}`
-    window.open(`https://wa.me/5521984540717?text=${message}`, "_blank")
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank")
   }
   
   return <section id="availability" className="px-6 py-16 md:px-12">

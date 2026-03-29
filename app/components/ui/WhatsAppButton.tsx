@@ -1,5 +1,5 @@
+"use client"
 import { Button } from "@/components/ui/button"
-import { FaWhatsapp } from "react-icons/fa"
 
 export default function WhatsAppButton(Props: {setOpen: (value: boolean) => void}) {
   return <Button id="whatsappbutton" 
