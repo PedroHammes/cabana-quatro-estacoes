@@ -1,3 +1,4 @@
+"use client"
 import Navbar from "@/app/components/ui/Navbar"
 import Hero from "@/app/components/sections/Hero"
 import About from "@/app/components/sections/About"
@@ -9,8 +10,10 @@ import Testimonials from "@/app/components/sections/Testimonials"
 import Availability from "@/app/components/sections/Availability"
 import Team from "@/app/components/sections/Team"
 import WhatsAppButton from "@/app/components/ui/WhatsAppButton"
+import { useState } from "react"
 
 export default function Home() {
+  const [open, setOpen] = useState(false)
   return (
     <main>
         <Navbar />
@@ -21,9 +24,9 @@ export default function Home() {
         <Partnerships />
         <Location />
         <Testimonials />
-        <Availability />
+        <Availability open={open} setOpen={setOpen}/>
         <Team />
-        <WhatsAppButton />
+        <WhatsAppButton setOpen={setOpen}/>
     </main>
   )
 }
