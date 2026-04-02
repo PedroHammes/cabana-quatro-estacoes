@@ -16,7 +16,7 @@ import Footer from "./components/ui/Footer"
 export default function Home() {
   const [open, setOpen] = useState(false)
   return (
-    <main>
+    <main className="pt-16">
         <Navbar setOpen={setOpen}/>
         <Hero />
         <About />
