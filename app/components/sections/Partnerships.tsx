@@ -33,29 +33,30 @@ export default function Partnerships() {
 
     return <section id="partnerships" className="px-6 py-16 md:px-12">
         <div>
-            <h1>PARCERIAS</h1>
+            <h2>PARCERIAS</h2>
         </div>
 
         <div>
-            <Carousel className="w-full max-w-48 sm:max-w-xs">
+            <Carousel className="w-full">
                 <CarouselContent>
                 {
                     partnerships.map((partner) => {
-                        return <CarouselItem key={partner.id}>
-                            <div>
-                                <div className="relative h-80">
-                                    { < Image
-                                    src={partner.image}
-                                    fill
-                                    alt={partner.title}
-                                    className="object-cover"
-                                    />}
-                                </div>
-                                <div>
-                                    <h3>{partner.title}</h3>
-                                    <p>{partner.description}</p>
-                                </div>
-                            </div>
+                        return <CarouselItem key={partner.id} className="basis-full">
+                                <div className="relative h-96 rounded-2xl overflow-hidden">
+                                    {
+                                        < Image
+                                        src={partner.image}
+                                        alt={partner.title}
+                                        fill
+                                        className="object-cover"
+                                        />
+                                    }
+                                    <div className="absolute inset-0 z-5 bg-linear-to-r from-transparent to-black/70"></div>
+                                    <div className="absolute right-0 top-0 bottom-0 w-1/2 z-10 p-8 flex flex-col justify-center">
+                                        <h3>{partner.title}</h3>
+                                        <p>{partner.description}</p>
+                                    </div>
+                                    </div>
                         </CarouselItem>
                     })
                 }
