@@ -17,9 +17,12 @@ export default function Hero() {
 
     <div className="
     relative z-10
-    flex flex-col items-center
+    flex flex-row justify-between w-full px-12
     ">
-        <h1>LUXO NA NATUREZA</h1>
+      <div>
+        LOGO
+      </div>
+      <h1>LUXO NA NATUREZA</h1>
     </div>
 
   </section>
