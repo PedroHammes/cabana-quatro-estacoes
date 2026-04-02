@@ -6,11 +6,12 @@ export default function About() {
         <h1>A Cabana</h1>
     </div>
     <div className="
-    flex flex-col md:flex-row
+    flex flex-col md:flex-row md:min-h-80
+    rounded-2xl overflow-hidden
+    bg-olive-500
     ">
         <div className="
-        relative
-        h-100 md:w-1/2
+        relative h-64 w-full md:h-auto md:w-1/2
         ">
             <Image
                 src="https://lh3.googleusercontent.com/p/AF1QipNZOSWKN8035xhS9ZVZpc2PuWOjgO3egsiHm6YO=w154-h258-n-k-no-nu"
@@ -24,6 +25,8 @@ export default function About() {
         </div>
         <div className="
         flex-1
+        p-8
+        flex flex-col gap-4
         ">
             <h2>A Cabana</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita quaerat eaque? Eligendi nihil, fugit earum dolore at quae! Ducimus maiores consectetur reprehenderit delectus! </p>
