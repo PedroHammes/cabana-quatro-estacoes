@@ -11,6 +11,7 @@ import Availability from "@/app/components/sections/Availability"
 import Team from "@/app/components/sections/Team"
 import WhatsAppButton from "@/app/components/ui/WhatsAppButton"
 import { useState } from "react"
+import Footer from "./components/ui/Footer"
 
 export default function Home() {
   const [open, setOpen] = useState(false)
@@ -27,6 +28,7 @@ export default function Home() {
         <Availability open={open} setOpen={setOpen}/>
         <Team />
         <WhatsAppButton setOpen={setOpen}/>
+        <Footer />
     </main>
   )
 }
