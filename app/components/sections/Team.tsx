@@ -6,20 +6,21 @@ export default function Team() {
         {
             id: 1,
             name: "Misael",
-            title: "Proprietário",
+            title: "PROPIETÁRIO",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
             image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/841739583.jpg?k=efa6f340203e87ade5b8f9017097e9d2536ea1f1b49f48d01ccbf0fa8aa36812&o="
         },
         {
             id: 2,
             name: "Juliana Martins",
-            title: "Atendente",
+            title: "ATENDENTE",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
             image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/841739583.jpg?k=efa6f340203e87ade5b8f9017097e9d2536ea1f1b49f48d01ccbf0fa8aa36812&o="
         }
     ]
-  return <section id="team" className="px-6 py-16 md:px-12">
+  return <section id="team" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
     <h2>EQUIPE</h2>
+    
     <div className="
     flex flex-col md:flex-row
     gap-6

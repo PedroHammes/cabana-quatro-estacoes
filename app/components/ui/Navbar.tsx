@@ -7,14 +7,12 @@ import {
 } from "@/components/ui/sheet"
 
 import { FaAirbnb } from "react-icons/fa"
-import { FaBuromobelexperte } from "react-icons/fa"
 
 export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
   return <nav className="
     px-6 py-3
     flex items-center justify-between
     fixed top-0 left-0 right-0 z-50
-
     bg-background
     ">
     <img alt="LOGO-cabanaquatroestacoes"></img>

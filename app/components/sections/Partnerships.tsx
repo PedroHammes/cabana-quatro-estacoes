@@ -31,7 +31,7 @@ export default function Partnerships() {
         }
     ]
 
-    return <section id="partnerships" className="px-6 py-16 md:px-12">
+    return <section id="partnerships" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
         <div>
             <h2>PARCERIAS</h2>
         </div>

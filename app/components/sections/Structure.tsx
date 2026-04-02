@@ -18,9 +18,9 @@ export default function Structure() {
         { title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://lh3.googleusercontent.com/p/AF1QipO8kfGvD5_52vBDjP31lEpaFGxjxO_jyOB-JIix=w154-h258-n-k-no-nu"
         }
     ]
-  return <section id="structure" className="px-6 py-16 md:px-12">
+  return <section id="structure" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col items-center justify-center">
     <h2>A Cabana - estrutura</h2>
-    <Carousel>
+    <Carousel className="w-full">
         <CarouselContent>
             {
                 rooms.map( (room) => {

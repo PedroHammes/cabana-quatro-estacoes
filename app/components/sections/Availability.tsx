@@ -32,7 +32,7 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank")
   }
   
-  return <section id="availability" className="px-6 py-16 md:px-12">
+  return <section id="availability" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
     <h2>Disponibilidade</h2>
     <div className="flex flex-row">
       <div className="w-1/2">

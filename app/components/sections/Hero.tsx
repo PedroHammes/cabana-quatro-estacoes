@@ -6,6 +6,7 @@ export default function Hero() {
   h-screen relative
   flex items-center justify-center
   bg-neutral-800
+  snap-start min-h-screen
   ">
     <Image
         src="https://lh3.googleusercontent.com/p/AF1QipOhFQzN1yRQDzsT8eKTmjBxpf4x-67rVle2YQQK=w154-h193-n-k-no-nu"

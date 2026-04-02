@@ -33,7 +33,7 @@ export default function Testimonials() {
             image: "/images/20260315_180605.jpg"
         }
     ]
-  return <section id="testimonials" className="px-6 py-16 md:px-12">
+  return <section id="testimonials" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
     <h2>Depoimentos</h2>
 
     <div className="
@@ -53,7 +53,7 @@ export default function Testimonials() {
 
     </div>
     <div className="px-12">
-        <Carousel className="flex flex-col md:flex-row">
+        <Carousel className="flex flex-col md:flex-row w-full">
             <CarouselContent>
             {
                 testimonials.map( (feedback) => {

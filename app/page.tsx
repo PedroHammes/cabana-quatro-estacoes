@@ -16,7 +16,7 @@ import Footer from "./components/ui/Footer"
 export default function Home() {
   const [open, setOpen] = useState(false)
   return (
-    <main className="pt-16">
+    <main className="pt-16 overflow-y-scroll scroll-smooth snap-y snap-mandatory h-screen">
         <Navbar setOpen={setOpen}/>
         <Hero />
         <About />
@@ -28,7 +28,7 @@ export default function Home() {
         <Availability open={open} setOpen={setOpen}/>
         <Team />
         <WhatsAppButton setOpen={setOpen}/>
-        <Footer />
+        <Footer setOpen={setOpen}/>
     </main>
   )
 }

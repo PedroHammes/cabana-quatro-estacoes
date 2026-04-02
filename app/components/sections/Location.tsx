@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Location(Props: {setOpen: (value: boolean) => void}) {
-  return <section id="location" className="px-6 py-16 md:px-12">
+  return <section id="location" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
     <h2>Localização</h2>
     <div className="
     flex flex-col md:flex-row
