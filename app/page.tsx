@@ -16,7 +16,7 @@ export default function Home() {
   const [open, setOpen] = useState(false)
   return (
     <main>
-        <Navbar />
+        <Navbar setOpen={setOpen}/>
         <Hero />
         <About />
         <Structure />
