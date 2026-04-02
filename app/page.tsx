@@ -23,7 +23,7 @@ export default function Home() {
         <Structure />
         <Differentials />
         <Partnerships />
-        <Location />
+        <Location setOpen={setOpen}/>
         <Testimonials />
         <Availability open={open} setOpen={setOpen}/>
         <Team />
