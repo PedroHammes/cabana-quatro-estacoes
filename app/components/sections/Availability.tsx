@@ -16,6 +16,7 @@ import { Calendar1Icon } from "lucide-react"
 import { format } from "date-fns"
 import { Calendar } from "@/components/ui/calendar"
 import { WHATSAPP_NUMBER } from "@/lib/constants"
+import Image from "next/image"
 
 export default function Availability(Props: {open: boolean, setOpen: (value: boolean) => void}) {
 
@@ -32,6 +33,27 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
   }
   
   return <section id="availability" className="px-6 py-16 md:px-12">
+    <h2>Disponibilidade</h2>
+    <div className="flex flex-row">
+      <div className="w-1/2">
+        <Calendar />
+        <Button onClick={() => Props.setOpen(true)}>
+          Faça sua reserva
+        </Button>
+      </div>
+
+      <div className="relative h-96 rounded-2xl overflow-hidden w-1/2">
+        {
+          <Image 
+          src={"https://cf.bstatic.com/xdata/images/hotel/max1024x768/841739583.jpg?k=efa6f340203e87ade5b8f9017097e9d2536ea1f1b49f48d01ccbf0fa8aa36812&o="}
+          alt="Reserva"
+          className="object-cover"
+          fill
+          />
+        }
+      </div>
+    </div>
+
     <Dialog open={Props.open} onOpenChange={Props.setOpen}>
       <form>
         <DialogContent className="sm:max-w-sm">
