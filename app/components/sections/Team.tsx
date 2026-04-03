@@ -24,20 +24,20 @@ export default function Team(Props: {setOpen: (value: boolean) => void}) {
     <div 
     className="
     h-screen
-    py-16 md:py-32 mx-60
+    py-16 md:py-32 mx-0 md:mx-60 px-4 md:px-0 max-w-full
     flex flex-col flex-1 items-center justify-center
     ">
         {/* Card principal */}
         <div className="
-        flex flex-col flex-1 h-full w-full md:flex-row md:min-h-80 gap-4
-        rounded-2xl overflow-visible
+        flex flex-col md:flex-row flex-1 h-full w-full md:min-h-80 gap-4 min-w-0
+        rounded-2xl overflow-hidden
         bg-olive-500
         ">
             {
                 team.map( (member) => {
                     return <div key={member.id}
                     className="
-                    flex-1 flex flex-col
+                    flex-1 flex flex-col min-h-[40vh]
                     ">
                         <div className="
                         relative h-full w-full flex-1
