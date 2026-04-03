@@ -38,7 +38,7 @@ export default function Structure() {
   return <section id="structure"
   className="
   snap-start h-screen
-  py-16 md:py-32 mx-4 md:mx-60
+  py-16 md:py-32 mx-0 px-4 lg:mx-32
   flex flex-col flex-1 items-center justify-center
   ">
 
@@ -48,7 +48,7 @@ export default function Structure() {
     rounded-2xl overflow-visible
     bg-olive-500
     ">
-        <Carousel setApi={setApi} className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
+        <Carousel setApi={setApi} opts={{ align: "center", containScroll: false }} className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
             <CarouselContent className="-ml-4 h-full">
                 {
                     rooms.map( (room, index) => {
@@ -56,8 +56,8 @@ export default function Structure() {
                             return (
                             <CarouselItem key={room.index}
                             className={isActive 
-                                    ? "basis-[60%] md:basis-[70%] h-full transition-all duration-500"
-                                    : "basis-[40%] md:basis-[30%] h-full transition-all duration-500"}
+                                    ? "basis-[60%] lg:basis-[60%] h-full transition-all duration-500"
+                                    : "basis-[40%] lg:basis-[60%] h-full transition-all duration-500"}
                                 >
                                 <div className="
                                 relative h-full rounded-2xl overflow-hidden

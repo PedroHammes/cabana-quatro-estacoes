@@ -3,12 +3,12 @@ import { BadgeDollarSign, HandCoins, HandHeart, Handshake, Star, TicketPercent }
 import { FaAirbnb, FaFacebook, FaWhatsapp, FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Footer(Props: {setOpen: (value: boolean) => void}) {
-    return <footer className="bg-card py-16 px-12 md:py-32 flex flex-col justify-center">
+    return <footer className="bg-card py-16 px-4 md:px-12 md:py-32 flex flex-col justify-center">
         
         {/* Card Principal */}
         <div className="flex flex-col md:flex-row gap-8 flex-1 h-full">
             {/* Coluna esquerda */}
-            <div className="flex flex-col gap-8 w-1/2">
+            <div className="flex flex-col gap-6 md:gap-8 w-full md:w-1/2">
                 <div className="flex flex-col gap-4">
                     <h3>Estamos nos principais sites de hospedagem:</h3>
                     <div className="flex items-center gap-4">
@@ -36,7 +36,7 @@ export default function Footer(Props: {setOpen: (value: boolean) => void}) {
             </div>
 
             {/* Coluna direita */}
-            <div className="flex flex-col gap-8 w-1/2">
+            <div className="flex flex-col gap-6 md:gap-8 w-full md:w-1/2">
                 <div className="flex flex-col gap-4">
                     <h3>Vantagens de reservar diretamente conosco</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

@@ -33,7 +33,7 @@ export default function Differentials() {
   return <section id="differentials"
   className="
   snap-start h-screen
-  py-16 md:py-32 mx-60
+  py-16 md:py-32 mx-0 px-4 lg:mx-32
   flex flex-col flex-1 items-center justify-center
   ">
 
@@ -43,7 +43,7 @@ export default function Differentials() {
     rounded-2xl overflow-visible
     bg-olive-500
     ">
-        <Carousel setApi={setApi} 
+        <Carousel setApi={setApi} opts={{ align: "center", containScroll: false }} 
         className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
             <CarouselContent className="-ml-4 h-full">
                 {
@@ -51,8 +51,8 @@ export default function Differentials() {
                         const isActive = index == current
                         return <CarouselItem key={detail.title}
                         className={isActive 
-                            ? "basis-[60%] md:basis-[70%] h-full transition-all duration-500"
-                            : "basis-[40%] md:basis-[30%] h-full transition-all duration-500"}
+                            ? "basis-[60%] md:basis-[60%] h-full transition-all duration-500"
+                            : "basis-[40%] md:basis-[40%] h-full transition-all duration-500"}
                         >
                             <div className="
                             relative h-full rounded-2xl overflow-hidden

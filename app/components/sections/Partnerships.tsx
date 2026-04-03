@@ -32,7 +32,7 @@ export default function Partnerships() {
     return <section id="partnerships"
     className="
     snap-start h-screen
-    py-16 md:py-32 px-8 md:px-0 md:mx-60 max-w-full
+    py-16 md:py-32 px-4 lg:px-0 lg:mx-32 max-w-full
     flex flex-col flex-1 items-center justify-center
     ">
         {/* Card Principal */}
