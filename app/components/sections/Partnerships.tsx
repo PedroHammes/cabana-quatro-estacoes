@@ -35,6 +35,7 @@ export default function Partnerships() {
     py-16 md:py-32 mx-60
     flex flex-col flex-1 items-center justify-center
     ">
+        {/* Card Principal */}
         <div className="
         flex flex-col flex-1 h-full md:flex-row md:min-h-80
         rounded-2xl overflow-visible
