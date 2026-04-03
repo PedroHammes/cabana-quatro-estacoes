@@ -8,41 +8,52 @@ export default function Team() {
             name: "Misael",
             title: "PROPIETÁRIO",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
-            image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/841739583.jpg?k=efa6f340203e87ade5b8f9017097e9d2536ea1f1b49f48d01ccbf0fa8aa36812&o="
+            image: ""
         },
         {
             id: 2,
             name: "Juliana Martins",
             title: "ATENDENTE",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
-            image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/841739583.jpg?k=efa6f340203e87ade5b8f9017097e9d2536ea1f1b49f48d01ccbf0fa8aa36812&o="
+            image: ""
         }
     ]
-  return <section id="team" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
-    <h2>EQUIPE</h2>
-    
+  return <section id="team" 
+  className="
+  snap-start h-screen
+  py-16 md:py-32 mx-60
+  flex flex-col flex-1 items-center justify-center
+  ">
+    {/* Card principal */}
     <div className="
-    flex flex-col md:flex-row
-    gap-6
+    flex flex-col flex-1 h-full w-full md:flex-row md:min-h-80 gap-4
+    rounded-2xl overflow-visible
+    bg-olive-500
     ">
         {
             team.map( (member) => {
-                return <div key={member.id}>
-                    <div className="relative h-80 w-full rounded-2xl overflow-hidden">
-                        {
-                            <Image
-                                src={member.image}
-                                alt="..."
-                                className="object-cover"
-                                fill
-                            />
-                        }
-                        <div className="absolute inset-0 z-5 bg-linear-to-t from-black/80 to-transparent" />
-                    </div>
-                    <div>
-                        <h3>{member.name}</h3>
-                        <p>{member.title}</p>
-                        <p>{member.description}</p>
+                return <div key={member.id}
+                className="
+                flex-1 flex flex-col
+                ">
+                    <div className="
+                    relative h-full w-full flex-1
+                    rounded-2xl overflow-hidden
+                    ">
+                        <Image
+                            src={member.image}
+                            alt="..."
+                            className="object-cover"
+                            fill
+                        />
+                        <div className="absolute inset-0 z-5 bg-linear-to-t from-black/80 to-transparent"></div> 
+                        <div className="
+                        absolute bottom-0 left-0 right-0 z-10 p-4
+                        ">
+                            <h3>{member.name}</h3>
+                            <p>{member.title}</p>
+                            <p>{member.description}</p>
+                        </div>
                     </div>
                 </div>
             })
