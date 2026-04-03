@@ -1,15 +1,18 @@
 import Image from "next/image";
 
 export default function About() {
-  return <section id="about" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col items-center justify-center">
-    <div>
-        <h1>A Cabana</h1>
-    </div>
+  return <section id="about" 
+  className="
+  snap-start h-screen
+  py-16 md:py-32 mx-4
+  flex flex-col flex-1 items-center justify-center
+  ">
+
+    {/*Card principal*/}
     <div className="
-    flex flex-col md:flex-row md:min-h-80
+    flex flex-col flex-1 h-full md:flex-row md:min-h-80
     rounded-2xl overflow-hidden
     bg-olive-500
-    
     ">
         <div className="
         relative h-64 w-full md:h-auto md:w-1/2
