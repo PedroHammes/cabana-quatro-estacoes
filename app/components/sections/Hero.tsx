@@ -9,13 +9,13 @@ export default function Hero() {
   snap-start min-h-screen
   ">
     <Image
-        src="https://lh3.googleusercontent.com/p/AF1QipOhFQzN1yRQDzsT8eKTmjBxpf4x-67rVle2YQQK=w154-h193-n-k-no-nu"
+        src=""
         fill={true}
         alt="Luxo na natureza"
 
         className="object-cover"
     />
-
+    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
     <div className="
     relative z-10
     flex flex-row justify-between w-full px-12

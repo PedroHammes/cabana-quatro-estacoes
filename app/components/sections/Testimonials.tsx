@@ -32,7 +32,7 @@ export default function Testimonials() {
     flex flex-col flex-1 items-center justify-center
     ">
 
-    {/* <div className="
+    <div className="
     flex flex-row w-[70%] mx-auto items-center justify-around
     bg-card rounded-2xl p-4
     gap-8 px-12 py-6
@@ -47,7 +47,7 @@ export default function Testimonials() {
             <Star className="fill-yellow-400 text-yellow-400"/>
         </div>
 
-    </div> */}
+    </div>
 
     {/*Card principal*/}
     <div className="

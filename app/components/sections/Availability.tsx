@@ -32,25 +32,35 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank")
   }
   
-  return <section id="availability" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
-    <h2>Disponibilidade</h2>
-    <div className="flex flex-row">
-      <div className="w-1/2">
-        <Calendar />
-        <Button onClick={() => Props.setOpen(true)}>
-          Faça sua reserva
-        </Button>
+  return <section id="availability"
+  className="
+  snap-start h-screen
+  py-16 md:py-32 mx-60
+  flex flex-col flex-1 items-center justify-center
+  ">
+    {/* Card principal */}
+    <div className="
+    flex flex-col flex-1 h-full w-full md:flex-row md:min-h-80 gap-4
+    rounded-2xl overflow-visible
+    bg-olive-500
+    ">
+      <div className="relative h-full rounded-2xl overflow-hidden w-[70%]">
+        <Image 
+        src={""}
+        alt="Reserva"
+        className="object-cover"
+        fill
+        />
+        <div
+        className="
+        absolute inset-0 z-5 bg-linear-to-r from-transparent to-black/70
+        "></div>
       </div>
-
-      <div className="relative h-96 rounded-2xl overflow-hidden w-1/2">
-        {
-          <Image 
-          src={"https://cf.bstatic.com/xdata/images/hotel/max1024x768/841739583.jpg?k=efa6f340203e87ade5b8f9017097e9d2536ea1f1b49f48d01ccbf0fa8aa36812&o="}
-          alt="Reserva"
-          className="object-cover"
-          fill
-          />
-        }
+      <div className="relative h-full rounded-2xl overflow-hidden w-[30%]">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=SEU_EMAIL_AQUI"
+              className="w-full h-full border-0 rounded-2xl"
+            />
       </div>
     </div>
 
