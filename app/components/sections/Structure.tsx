@@ -14,11 +14,13 @@ import React from "react";
 
 export default function Structure() {
     const rooms = [
-        { title: "Sala", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://lh3.googleusercontent.com/p/AF1QipOz_viBkuTvckSN1QPQKhVpizjj7EIWr6n2ToQA=w154-h155-n-k-no-nu"
+        { title: "Sala", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
         },
-        { title: "Cozinha", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://lh3.googleusercontent.com/p/AF1QipOz_viBkuTvckSN1QPQKhVpizjj7EIWr6n2ToQA=w154-h155-n-k-no-nu"
+        { title: "Cozinha", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
         },
-        { title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://lh3.googleusercontent.com/p/AF1QipO8kfGvD5_52vBDjP31lEpaFGxjxO_jyOB-JIix=w154-h258-n-k-no-nu"
+        { title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
+        },
+        { title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
         }
     ]
 
@@ -36,7 +38,7 @@ export default function Structure() {
   return <section id="structure"
   className="
   snap-start h-screen
-  py-16 md:py-32 mx-4
+  py-16 md:py-32 mx-60
   flex flex-col flex-1 items-center justify-center
   ">
 
@@ -70,7 +72,6 @@ export default function Structure() {
                                     <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
                                     <div className="
                                     relative mt-auto p-4 z-10
-                                    
                                     ">
                                         <h3>{room.title}</h3>
                                         {isActive && <p>{room.description}</p>}

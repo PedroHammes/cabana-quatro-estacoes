@@ -1,49 +1,88 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+"use client"
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
 import Image from "next/image";
+import { type CarouselApi } from "@/components/ui/carousel"
+import React from "react";
 
 export default function Differentials() {
-    
     const details = [
-        {title: "Claraboia", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "/images/20260316_105845.jpg"},
-        {title: "Pitfire", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "/images/20260316_105845.jpg"},
-        {title: "Ofurô", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "/images/20260316_105845.jpg"},
-        {title: "Rede Suspensa", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "/images/20260316_105845.jpg"}
+        {title: "Claraboia", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""},
+        {title: "Pitfire", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""},
+        {title: "Ofurô", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""},
+        {title: "Rede Suspensa", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""}
     ]
-  return <section id="differentials" className="px-6 py-16 md:px-12 snap-start min-h-screen flex flex-col justify-center">
-    <h2>A Cabana - diferenciais</h2>
-    <Carousel className="w-full">
-        <CarouselContent>
-            {
-                details.map( (detail) => {
+
+    const [api, setApi] = React.useState<CarouselApi>()
+    const [current, setCurrent] = React.useState(0)
+
+    React.useEffect(() => {
+        if (!api) return
+    api.on("select", () => {
+        setCurrent(api.selectedScrollSnap())
+    })
+    }, [api])
+
+  return <section id="differentials"
+  className="
+  snap-start h-screen
+  py-16 md:py-32 mx-60
+  flex flex-col flex-1 items-center justify-center
+  ">
+
+    {/*Card principal*/}
+    <div className="
+    flex flex-col flex-1 h-full md:flex-row md:min-h-80
+    rounded-2xl overflow-visible
+    bg-olive-500
+    ">
+        <Carousel setApi={setApi} 
+        className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
+            <CarouselContent className="-ml-4 h-full">
+                {
+                    details.map( (detail, index) => {
+                        const isActive = index == current
                         return <CarouselItem key={detail.title}
-                            className="
-                            basis-1/2 lg:basis-1/3
-                            "
-                            >
+                        className={isActive 
+                                ? "basis-[70%] h-full transition-all duration-500"
+                                : "basis-[30%] h-full transition-all duration-500"}
+                        >
                                 <div className="
-                                relative h-80
-                                rounded-2xl overflow-hidden
+                                relative h-full rounded-2xl overflow-hidden
+                                flex flex-col
                                 ">
-                                    {<Image
+                                    <Image
                                         src={detail.image}
                                         fill
                                         alt={detail.title}
                                         className="object-cover"
-                                    />}
-                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent" />
-                                    <div className="absolute bottom-0 left-0 right-0 z-10 p-4">
-                                        <p>{detail.title}</p>
-                                        <p>{detail.description}</p>
+                                    />
+                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
+                                    <div className="
+                                    relative mt-auto p-4 z-10
+                                    ">
+                                        <h3>{detail.title}</h3>
+                                        {isActive && <p>{detail.description}</p>}
                                     </div>
                                 </div>
                             
 
                         </CarouselItem>
-                })
-            }
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-    </Carousel>
+                    })
+                }
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+        </Carousel>
+    </div>
+
+
   </section>
 }

@@ -4,7 +4,7 @@ export default function About() {
   return <section id="about" 
   className="
   snap-start h-screen
-  py-16 md:py-32 mx-4
+  py-16 md:py-32 mx-60
   flex flex-col flex-1 items-center justify-center
   ">
 
@@ -18,7 +18,7 @@ export default function About() {
         relative h-64 w-full md:h-auto md:w-1/2
         ">
             <Image
-                src="https://lh3.googleusercontent.com/p/AF1QipNZOSWKN8035xhS9ZVZpc2PuWOjgO3egsiHm6YO=w154-h258-n-k-no-nu"
+                src=""
                 fill={true}
                 alt="Luxo na natureza"
 
@@ -26,6 +26,7 @@ export default function About() {
                 object-cover
                 "
             />
+            <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
         </div>
         <div className="
         flex-1
