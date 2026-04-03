@@ -51,29 +51,27 @@ export default function Differentials() {
                         const isActive = index == current
                         return <CarouselItem key={detail.title}
                         className={isActive 
-                                ? "basis-[70%] h-full transition-all duration-500"
-                                : "basis-[30%] h-full transition-all duration-500"}
+                            ? "basis-[70%] h-full transition-all duration-500"
+                            : "basis-[30%] h-full transition-all duration-500"}
                         >
+                            <div className="
+                            relative h-full rounded-2xl overflow-hidden
+                            flex flex-col
+                            ">
+                                <Image
+                                    src={detail.image}
+                                    fill
+                                    alt={detail.title}
+                                    className="object-cover"
+                                />
+                                <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
                                 <div className="
-                                relative h-full rounded-2xl overflow-hidden
-                                flex flex-col
+                                relative mt-auto p-4 z-10
                                 ">
-                                    <Image
-                                        src={detail.image}
-                                        fill
-                                        alt={detail.title}
-                                        className="object-cover"
-                                    />
-                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
-                                    <div className="
-                                    relative mt-auto p-4 z-10
-                                    ">
-                                        <h3>{detail.title}</h3>
-                                        {isActive && <p>{detail.description}</p>}
-                                    </div>
+                                    <h3>{detail.title}</h3>
+                                    {isActive && <p>{detail.description}</p>}
                                 </div>
-                            
-
+                            </div>
                         </CarouselItem>
                     })
                 }
