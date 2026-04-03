@@ -27,15 +27,14 @@ export default function Testimonials() {
 
     return <section id="testimonials"
     className="
-    snap-start h-screen
-    py-16 md:py-32 mx-60
-    flex flex-col flex-1 items-center justify-center
+    snap-start h-screen py-16 md:py-32 mx-4 md:mx-60 px-4 md:px-0 flex flex-col flex-1 items-center justify-center max-w-full
     ">
 
+    {/* Contador */}
     <div className="
-    flex flex-row w-[70%] mx-auto items-center justify-around
+    flex flex-col md:flex-row w-full md:w-[70%] mx-auto items-center justify-around
     bg-card rounded-2xl p-4
-    gap-8 px-12 py-6
+    gap-8 px-4 md:px-12 py-6
     ">
         <p className="text-lg font-semibold">Estamos no ar desde Abril de 2025</p>
         <p className="text-lg font-semibold">245 hospedagens</p>
@@ -51,17 +50,15 @@ export default function Testimonials() {
 
     {/*Card principal*/}
     <div className="
-    flex flex-col flex-1 h-full md:flex-row md:min-h-80
-    rounded-2xl overflow-visible
-    bg-olive-500
+    flex flex-col flex-1 h-full md:flex-row md:min-h-80 rounded-2xl overflow-hidden bg-olive-500 min-w-0 w-full
     ">
-        <Carousel className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
+        <Carousel className="w-full h-full flex-1 min-h-0 [&>div]:h-full overflow-hidden">
             <CarouselContent className="-ml-4 h-full">
                 {chunks.map((chunk, i) => (
                     <CarouselItem key={i} className="h-full basis-full pl-4">
                         <div className="flex flex-col gap-4 h-full">
                             {chunk.map((feedback) => (
-                                <div key={feedback.id} className="bg-card rounded-2xl p-4 flex-1">
+                                <div key={feedback.id} className="bg-card rounded-2xl p-4 flex-1 overflow-hidden w-full min-w-0">
                                     <div className="flex flex-row items-center gap-2">
                                         <Avatar>
                                             <AvatarImage src={feedback.image} alt={feedback.name} />
