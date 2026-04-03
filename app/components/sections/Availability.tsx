@@ -35,16 +35,16 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
   return <section id="availability"
   className="
   snap-start h-screen
-  py-16 md:py-32 mx-60
+  py-16 md:py-32 mx-0 md:mx-60 px-4 md:px-0 max-w-full
   flex flex-col flex-1 items-center justify-center
   ">
     {/* Card principal */}
     <div className="
-    flex flex-col flex-1 h-full w-full md:flex-row md:min-h-80 gap-4
-    rounded-2xl overflow-visible
+    flex flex-col flex-1 h-full w-full md:flex-row md:min-h-80 gap-4 min-w-0
+    rounded-2xl overflow-hidden
     bg-olive-500
     ">
-      <div className="relative h-full rounded-2xl overflow-hidden w-[70%]">
+      <div className="relative h-full rounded-2xl overflow-hidden w-full md:w-[70%]">
         <Image 
         src={"https://placehold.co/800x600"}
         alt="Reserva"
@@ -56,7 +56,7 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
         absolute inset-0 z-5 bg-linear-to-r from-transparent to-black/70
         "></div>
       </div>
-      <div className="relative h-full rounded-2xl overflow-hidden w-[30%]">
+      <div className="relative h-full rounded-2xl overflow-hidden w-full md:w-[30%]">
             <iframe
               src="https://calendar.google.com/calendar/embed?src=SEU_EMAIL_AQUI"
               className="w-full h-full border-0 rounded-2xl"
