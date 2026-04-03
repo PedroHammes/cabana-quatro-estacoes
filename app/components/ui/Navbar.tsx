@@ -50,8 +50,12 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
         Faça sua reserva
       </Button>
 
-      <FaAirbnb className="text-white text-xl"/>
-      <span className="font-bold text-white border-2 border-white rounded px-1">B.</span>
+      <a href="https://www.airbnb.com.br/rooms/1400061823556658830?guests=1&adults=1&s=67&unique_share_id=77cdcf28-af7f-4b2a-a09f-d209e4e47331" target="_blank">
+        <FaAirbnb className="text-white text-xl"/>
+      </a>
+      <a href="https://www.booking.com/Share-N86BXf" target="_blank">
+        <span className="font-bold text-white border-2 border-white rounded px-1">B.</span>
+      </a>
     </div>
     
   </nav>
