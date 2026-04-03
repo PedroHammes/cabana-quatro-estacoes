@@ -14,13 +14,13 @@ import React from "react";
 
 export default function Structure() {
     const rooms = [
-        { title: "Sala", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
+        { index: 1, title: "Sala", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
         },
-        { title: "Cozinha", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
+        { index: 2, title: "Cozinha", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
         },
-        { title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
+        { index: 3, title: "Varanda", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
         },
-        { title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: ""
+        { index: 4, title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
         }
     ]
 
@@ -54,7 +54,7 @@ export default function Structure() {
                     rooms.map( (room, index) => {
                         const isActive = index == current
                             return (
-                            <CarouselItem key={room.title}
+                            <CarouselItem key={room.index}
                             className={isActive 
                                     ? "basis-[70%] h-full transition-all duration-500"
                                     : "basis-[30%] h-full transition-all duration-500"}

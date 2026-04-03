@@ -14,10 +14,10 @@ import React from "react";
 
 export default function Differentials() {
     const details = [
-        {title: "Claraboia", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""},
-        {title: "Pitfire", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""},
-        {title: "Ofurô", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""},
-        {title: "Rede Suspensa", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: ""}
+        {index: 1, title: "Claraboia", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"},
+        {index: 2, title: "Pitfire", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"},
+        {index: 3, title: "Ofurô", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"},
+        {index: 4, title: "Rede Suspensa", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"}
     ]
 
     const [api, setApi] = React.useState<CarouselApi>()

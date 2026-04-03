@@ -18,7 +18,7 @@ export default function About() {
         relative h-64 w-full md:h-auto md:w-1/2
         ">
             <Image
-                src=""
+                src="https://placehold.co/800x600"
                 fill={true}
                 alt="Luxo na natureza"
 

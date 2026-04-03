@@ -9,19 +9,16 @@ export default function Team(Props: {setOpen: (value: boolean) => void}) {
             name: "Misael",
             title: "PROPIETÁRIO",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
-            image: ""
+            image: "https://placehold.co/800x600"
         },
         {
             id: 2,
             name: "Juliana Martins",
             title: "ATENDENTE",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
-            image: ""
+            image: "https://placehold.co/800x600"
         }
     ]
-    function setOpen(value: boolean): void {
-        throw new Error("Function not implemented.")
-    }
 
   return <section id="team" className="snap-start ">
     <div 

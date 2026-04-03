@@ -9,7 +9,7 @@ export default function Hero() {
   snap-start min-h-screen
   ">
     <Image
-        src=""
+        src="https://placehold.co/800x600"
         fill={true}
         alt="Luxo na natureza"
 
