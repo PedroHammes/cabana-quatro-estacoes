@@ -38,7 +38,7 @@ export default function Structure() {
   return <section id="structure"
   className="
   snap-start h-screen
-  py-16 md:py-32 mx-60
+  py-16 md:py-32 mx-4 md:mx-60
   flex flex-col flex-1 items-center justify-center
   ">
 
@@ -56,8 +56,8 @@ export default function Structure() {
                             return (
                             <CarouselItem key={room.index}
                             className={isActive 
-                                    ? "basis-[70%] h-full transition-all duration-500"
-                                    : "basis-[30%] h-full transition-all duration-500"}
+                                    ? "basis-[60%] md:basis-[70%] h-full transition-all duration-500"
+                                    : "basis-[40%] md:basis-[30%] h-full transition-all duration-500"}
                                 >
                                 <div className="
                                 relative h-full rounded-2xl overflow-hidden

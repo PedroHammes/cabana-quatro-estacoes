@@ -51,8 +51,8 @@ export default function Differentials() {
                         const isActive = index == current
                         return <CarouselItem key={detail.title}
                         className={isActive 
-                            ? "basis-[70%] h-full transition-all duration-500"
-                            : "basis-[30%] h-full transition-all duration-500"}
+                            ? "basis-[60%] md:basis-[70%] h-full transition-all duration-500"
+                            : "basis-[40%] md:basis-[30%] h-full transition-all duration-500"}
                         >
                             <div className="
                             relative h-full rounded-2xl overflow-hidden
