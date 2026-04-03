@@ -18,7 +18,7 @@ export default function Hero() {
     <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
     <div className="
     relative z-10
-    flex flex-row justify-between w-full px-12
+    flex flex-col md:flex-row md:justify-between items-center gap-4 w-full px-12
     ">
       <div>
         LOGO
