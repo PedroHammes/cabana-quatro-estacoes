@@ -32,13 +32,13 @@ export default function Partnerships() {
     return <section id="partnerships"
     className="
     snap-start h-screen
-    py-16 md:py-32 mx-60
+    py-16 md:py-32 px-8 md:px-0 md:mx-60 max-w-full
     flex flex-col flex-1 items-center justify-center
     ">
         {/* Card Principal */}
         <div className="
-        flex flex-col flex-1 h-full md:flex-row md:min-h-80
-        rounded-2xl overflow-visible
+        flex flex-col flex-1 h-full md:flex-row md:min-h-80 w-full
+        rounded-2xl overflow-hidden
       bg-olive-500
         ">
             <Carousel className="w-full h-full flex-1 min-h-0 [&>div]:h-full">

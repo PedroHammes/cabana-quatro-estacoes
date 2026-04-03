@@ -16,7 +16,7 @@ import Footer from "./components/ui/Footer"
 export default function Home() {
   const [open, setOpen] = useState(false)
   return (
-    <main className="pt-16 overflow-y-scroll scroll-smooth snap-y snap-mandatory h-screen">
+    <main className="pt-16 overflow-y-scroll overflow-x-hidden scroll-smooth snap-y snap-mandatory h-screen">
         <Navbar setOpen={setOpen}/>
         <Hero />
         <About />
