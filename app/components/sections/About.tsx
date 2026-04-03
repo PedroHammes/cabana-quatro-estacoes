@@ -4,7 +4,7 @@ export default function About() {
   return <section id="about" 
   className="
   snap-start h-screen
-  py-16 md:py-32 mx-60
+  py-16 md:py-32 mx-4 md:mx-60
   flex flex-col flex-1 items-center justify-center
   ">
 
@@ -15,7 +15,7 @@ export default function About() {
     bg-olive-500
     ">
         <div className="
-        relative h-64 w-full md:h-auto md:w-1/2
+        relative h-48 md:h-auto w-full md:w-1/2
         ">
             <Image
                 src="https://placehold.co/800x600"
