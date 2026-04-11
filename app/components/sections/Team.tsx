@@ -6,17 +6,10 @@ export default function Team(Props: {setOpen: (value: boolean) => void}) {
     const team = [
         {
             id: 1,
-            name: "Misael",
-            title: "PROPIETÁRIO",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
-            image: "https://placehold.co/800x600"
-        },
-        {
-            id: 2,
             name: "Juliana Martins",
             title: "ATENDENTE",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda ratione mollitia commodi culpa excepturi.",
-            image: "https://placehold.co/800x600"
+            description: "Coanfitriã com foco em proporcionar uma experiência impecável , acolhedora e inesquecível.",
+            image: "/ux/08-team/juliana.png"
         }
     ]
 
@@ -27,40 +20,33 @@ export default function Team(Props: {setOpen: (value: boolean) => void}) {
     py-16 md:py-32 mx-0 lg:mx-32 px-4 max-w-full
     flex flex-col flex-1 items-center justify-center
     ">
-        {/* Card principal */}
         <div className="
-        flex flex-col md:flex-row flex-1 h-full w-full md:min-h-80 gap-4 min-w-0
-        rounded-2xl overflow-hidden
-        bg-olive-500
+            flex flex-col md:flex-row flex-1 h-full w-full md:min-h-80
+            rounded-2xl overflow-hidden
+            bg-[#698061] text-white
         ">
-            {
-                team.map( (member) => {
-                    return <div key={member.id}
-                    className="
-                    flex-1 flex flex-col min-h-[40vh]
-                    ">
-                        <div className="
-                        relative h-full w-full flex-1
-                        rounded-2xl overflow-hidden
-                        ">
-                            <Image
-                                src={member.image}
-                                alt="..."
-                                className="object-cover"
-                                fill
-                            />
-                            <div className="absolute inset-0 z-5 bg-linear-to-t from-black/80 to-transparent"></div> 
-                            <div className="
-                            absolute bottom-0 left-0 right-0 z-10 p-4
-                            ">
-                                <h3>{member.name}</h3>
-                                <p>{member.title}</p>
-                                <p>{member.description}</p>
-                            </div>
-                        </div>
+            {team.map((member) => (
+                <div key={member.id} className="flex flex-col md:flex-row w-full">
+                    {/* Imagem */}
+                    <div className="relative flex-1 min-h-[40vh]">
+                        <Image
+                            src={member.image}
+                            alt={member.name}
+                            className="object-cover"
+                            fill
+                        />
                     </div>
-                })
-            }
+                    {/* Texto */}
+                    <div className="flex-1 p-8 flex flex-col justify-center gap-4">
+                        <h3>{member.name}</h3>
+                        <p className="text-sm tracking-widest">{member.title}</p>
+                        <p>{member.description}</p>
+                        <button className="mt-4 border border-white rounded-full px-6 py-2 w-fit">
+                            Fale com {member.name.split(" ")[0]}
+                        </button>
+                    </div>
+                </div>
+            ))}
         </div>
     </div>
     <Footer setOpen={Props.setOpen}/>
