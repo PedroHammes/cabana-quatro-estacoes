@@ -71,7 +71,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
       </a>
       <a href="https://www.booking.com/Share-N86BXf" target="_blank">
         <Image
-          src="/SITE - CABANA QUATRO ESTAÇÕES/01 - MENU/LOGO/bookingB.png"
+          src="/ux/01-navbar/LOGO/bookingB.png"
           alt="Booking"
           width={24}
           height={24}
