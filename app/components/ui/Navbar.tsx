@@ -15,7 +15,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     bg-background
     ">
     <Image
-      src="/SITE - CABANA QUATRO ESTAÇÕES/01 - MENU/LOGO/logo branca.png"
+      src="/ux/01-navbar/logos/B.png"
       alt="Cabana Quatro Estações"
       width={120}
       height={40}
