@@ -7,9 +7,6 @@ import {
 } from "@/components/ui/sheet"
 import Image from "next/image"
 
-import { FaAirbnb } from "react-icons/fa"
-import Image from "next/image"
-
 export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
   return <nav className="
     px-6 py-3
