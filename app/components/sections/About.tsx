@@ -18,7 +18,7 @@ export default function About() {
         relative h-48 md:h-auto w-full md:w-1/2
         ">
             <Image
-                src="https://placehold.co/800x600"
+                src="/ux/03-about/about.png"
                 fill={true}
                 alt="Luxo na natureza"
 
@@ -26,19 +26,20 @@ export default function About() {
                 object-cover
                 "
             />
-            <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
         </div>
         <div className="
         flex-1
         p-8
-        flex flex-col gap-4
+        flex flex-col gap-8
+        relative overflow-hidden
         ">
             <h2>A Cabana</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita quaerat eaque? Eligendi nihil, fugit earum dolore at quae! Ducimus maiores consectetur reprehenderit delectus! </p>
-
-            <p>Ipsa dolorem totam sunt numquam molestias dolorum iure sint quo tempora eligendi! Impedit sapiente vero ratione, sint voluptatibus qui doloribus, laboriosam ipsum eius facilis recusandae! </p>
-
-            <p className="font-bold">Exercitationem recusandae ipsum molestias quia eos corporis dignissimos odio voluptas consectetur.</p>
+            <p>
+              Imagine um refúgio onde as paredes de vidro dissolvem a fronteira entre o luxo e a natureza selvagem. A Cabana Quatro Estações não é apenas uma hospedagem; é uma experiência sensorial desenhada para quem busca exclusividade em cada detalhe.
+            </p>
+            <p>
+              Sob o icônico teto A-frame, a modernidade se revela em espaços claros e minimalistas. Aqui, o seu despertar é guiado por uma claraboia panorâmica que transforma o céu no seu teto particular, enquanto o aroma do café se mistura ao frescor da montanha.
+            </p>
         </div>
 
     </div>

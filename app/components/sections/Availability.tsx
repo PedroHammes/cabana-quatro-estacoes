@@ -46,7 +46,7 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
     ">
       <div className="relative h-full rounded-2xl overflow-hidden w-full md:w-[70%]">
         <Image 
-        src={"https://placehold.co/800x600"}
+        src={"/ux/07-availability/reserva.jpg"}
         alt="Reserva"
         className="object-cover"
         fill

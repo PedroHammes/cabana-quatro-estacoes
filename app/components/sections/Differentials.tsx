@@ -14,10 +14,15 @@ import React from "react";
 
 export default function Differentials() {
     const details = [
-        {index: 1, title: "Claraboia", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"},
-        {index: 2, title: "Pitfire", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"},
-        {index: 3, title: "Ofurô", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"},
-        {index: 4, title: "Rede Suspensa", description: "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit deleniti vero natus voluptates beatae alias maxime impedit officiis dolores.", image: "https://placehold.co/800x600"}
+        {index: 1, title: "Claraboia", image: "/ux/04-structure/diferenciais/photos/01claraboia.jpg"},
+        {index: 2, title: "Pitfire", image: "/ux/04-structure/diferenciais/photos/02pitfire.png"},
+        {index: 3, title: "Ofurô", image: "/ux/04-structure/diferenciais/photos/03ofuro.jpg"},
+        {index: 4, title: "Rede Suspensa", image: "/ux/04-structure/diferenciais/photos/04redesuspensa.jpg"},
+        {index: 5, title: "Balanço", image: "/ux/04-structure/diferenciais/photos/05balanco.jpg"},
+        {index: 6, title: "Modelo", image: "/ux/04-structure/diferenciais/photos/06modelo.jpg"},
+        {index: 7, title: "Pergolato", image: "/ux/04-structure/diferenciais/photos/07pergolato.jpg"},
+        {index: 8, title: "Vista", image: "/ux/04-structure/diferenciais/photos/08vista.jpg"},
+        {index: 9, title: "Vitrola Retrô", image: "/ux/04-structure/diferenciais/photos/09vitrolaretro.jpg"}
     ]
 
     const [api, setApi] = React.useState<CarouselApi>()
@@ -41,7 +46,7 @@ export default function Differentials() {
     <div className="
     flex flex-col flex-1 h-full md:flex-row md:min-h-80
     rounded-2xl overflow-visible
-    bg-olive-500
+    bg-[#698061] text-white
     ">
         <Carousel setApi={setApi} opts={{ align: "center", containScroll: false }} 
         className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
@@ -69,7 +74,7 @@ export default function Differentials() {
                                 relative mt-auto p-4 z-10
                                 ">
                                     <h3>{detail.title}</h3>
-                                    {isActive && <p>{detail.description}</p>}
+                                    {isActive}
                                 </div>
                             </div>
                         </CarouselItem>

@@ -7,18 +7,19 @@ import { Star } from "lucide-react"
 
 export default function Testimonials() {
     const testimonials = [
-        { id: 1, name: "Fulano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et, expedita sequi voluptas impedit omnis deserunt ipsam nisi praesentium dolore!", rating: 5, date: "01/01/2026", image: "" },
-        { id: 2, name: "Fulano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et, expedita sequi voluptas impedit omnis deserunt ipsam nisi praesentium dolore!", rating: 4, date: "01/01/2026", image: "/images/20260315_180605.jpg" },
-        { id: 3, name: "Fulano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et, expedita sequi voluptas impedit omnis deserunt ipsam nisi praesentium dolore!", rating: 2, date: "01/01/2026", image: "/images/20260315_180605.jpg" },
-        { id: 4, name: "Ciclano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 5, date: "02/01/2026", image: "" },
-        { id: 5, name: "Beltrano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 3, date: "03/01/2026", image: "" },
-        { id: 6, name: "Fulana", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 5, date: "04/01/2026", image: "" },
-        { id: 1, name: "Fulano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et, expedita sequi voluptas impedit omnis deserunt ipsam nisi praesentium dolore!", rating: 5, date: "01/01/2026", image: "" },
-        { id: 2, name: "Fulano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et, expedita sequi voluptas impedit omnis deserunt ipsam nisi praesentium dolore!", rating: 4, date: "01/01/2026", image: "/images/20260315_180605.jpg" },
-        { id: 3, name: "Fulano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et, expedita sequi voluptas impedit omnis deserunt ipsam nisi praesentium dolore!", rating: 2, date: "01/01/2026", image: "/images/20260315_180605.jpg" },
-        { id: 4, name: "Ciclano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 5, date: "02/01/2026", image: "" },
-        { id: 5, name: "Beltrano", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 3, date: "03/01/2026", image: "" },
-        { id: 6, name: "Fulana", lastname: "DeTal", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 5, date: "04/01/2026", image: "" },
+        { id: 1, name: "Jonas", lastname: "", text: "Ao chegar no local a gente já se encanta. Lugar perfeita para passar um tempo na natureza com seu companheiro, excelente vista e incrivelmente limpa e organizada. Cabada equipada com todos os matérias de cozinha necessários para uma incrível hospedagem.Cada momento neste lugar é de impressionar, com uma cama super confortável e uma excelente vista. Uma experiência única e extraordinária.", rating: 5, date: "", image: "" },
+
+        { id: 2, name: "Luiz", lastname: "Henrique", text: "A estadia foi ótima. A cabana é nova, super equipada, moderna, charmosa. A vista é linda e o pôr do sol é deslumbrante, pra curtir tomando um vinho no ofurô. Perfeito lugar para aproveitar em casal, silencioso e privativo. Super recomendo!", rating: 5, date: "", image: "" },
+
+        { id: 3, name: "Jessica", lastname: "", text: "A cabana é perfeita! Um lugar maravilhoso para distrair e descansar, amamos cada detalhe. O que não levamos conseguimos comprar no empório da própria cabana. Sempre solícitos, tiraram todas nossas dúvidas prontamente pelo Whats. Pretendemos retornar.", rating: 5, date: "", image: "" },
+
+        { id: 4, name: "Gabriel", lastname: "", text: "Uma das melhores cabanas que já fiquei. Bem espaçosa e aconchegante, cozinha completa, com diversos utensílios, tv grande, vários jogos pra passar o tempo, além do empório que salva com bastante itens essenciais! Com certeza retornarei!", rating: 5, date: "", image: "" },
+
+        { id: 5, name: "Anderson", lastname: "", text: "A cabana é extremamente nova e aconchegante, a localização é incrível, com uma vista maravilhosa. As fotos são fidedignas com a realidade do local. Eu super recomendo o espaço!", rating: 5, date: "", image: "" },
+
+        { id: 6, name: "Keli", lastname: "Cristina", text: "Ambiente simplesmente espetacular. Tudo organizado, limpo e lindo. Pra quem busca um lugar de paz e viver momentos únicos, a cabana é mais indicado. Voltarei outras vezes.", rating: 5, date: "", image: "" },
+
+        { id: 7, name: "Juliana", lastname: "", text: "Fui com meu noivo somente para passar uma noite e foi a melhor escolha que fizemos. Que local lindo, extremamente aconchegante e agradável. Para quem está buscando tranquilidade, privacidade, paz e natureza é o local ideal. Todos os espaços da cabana oferecem muito conforto e são extremamente úteis. A roupa de cama e os travesseiros são maravilhosos e as toalhas estavam super cheirosas, me senti em casa! O contato com o anfitrião foi excelente. Com certeza voltaremos para ficar mais dias.", rating: 5, date: "", image: "" },
     ]
 
     const chunks = testimonials.reduce((acc, _, i) =>

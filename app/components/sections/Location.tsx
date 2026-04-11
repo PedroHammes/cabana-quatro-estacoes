@@ -27,23 +27,36 @@ export default function Location(Props: {setOpen: (value: boolean) => void}) {
       </div>
 
       {/* Card da direita */}
-      <div className="relative rounded-2xl overflow-hidden w-full md:w-6/10 h-full">
+      <div className="relative rounded-2xl overflow-hidden w-full md:w-6/10 h-full text-white">
         <Image
-        src="/images/20260315_181255.jpg"
+        src="/ux/06-location/location.png"
         fill
         alt="Como chegar"
         className="object-cover"
         />
         <div
         className="
-        absolute inset-0 z-5 bg-linear-to-r from-transparent to-black/70
+        absolute inset-0 z-5 bg-linear-to-b from-transparent to-black/70
         "></div>
         <div
         className="
         absolute bottom-0 left-0 right-0 p-8
         ">
           <h3>Como chegar</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam sequi dolorem eligendi a repellat voluptatibus corrupti asperiores laboriosam facere quidem, sit nam inventore, quod exercitationem!</p>
+          <p>
+            <strong>Endereço:</strong><br />
+            Condomínio Fazenda Boa Vista – Estrada Sítio Barreiros, nº 1.801, Casa 3 <br />
+            – Fazenda Boa Vista, Bairro Maravilha – Paty do Alferes – CEP 26.950-000.
+          </p>
+          <p className="bg-destructive rounded-lg p-4">
+              <strong>Atenção!</strong>
+              <br/>
+              Para quem vem pelo <strong>Vale das Videiras</strong>, <strong>Araras</strong> ou <strong>Petrópolis</strong>:
+              Siga sempre pela RJ-117 até o Posto de Saúde de Maravilha / Paty do Alferes.
+          </p>
+          <p>
+            Insira o endereço no GPS antes de entrar na estrada de terra, pois o sinal pode oscilar na região rural
+          </p>
           <Button onClick={() => Props.setOpen(true)}>
             Entre em contato
           </Button>
