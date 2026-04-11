@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/sheet"
 
 import { FaAirbnb } from "react-icons/fa"
+import Image from "next/image"
 
 export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
   return <nav className="
@@ -15,7 +16,13 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     fixed top-0 left-0 right-0 z-50
     bg-background
     ">
-    <img alt="LOGO-cabanaquatroestacoes"></img>
+    <Image
+      src="/SITE - CABANA QUATRO ESTAÇÕES/01 - MENU/LOGO/logo branca.png"
+      alt="Cabana Quatro Estações"
+      width={120}
+      height={40}
+      className="object-contain"
+    />
     <div className="md:hidden">
         <Sheet>
             <SheetTrigger>Menu</SheetTrigger>
@@ -46,15 +53,29 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     </div>
 
     <div className="flex items-center gap-2">
-      <Button onClick={() => Props.setOpen(true)}>
-        Faça sua reserva
+      <Button
+      onClick={() => Props.setOpen(true)}
+      className="rounded-full"
+      style={{ color: '#ffffff', fontWeight: 'bold' }}
+      >
+        FAÇA SUA RESERVA
       </Button>
 
       <a href="https://www.airbnb.com.br/rooms/1400061823556658830?guests=1&adults=1&s=67&unique_share_id=77cdcf28-af7f-4b2a-a09f-d209e4e47331" target="_blank">
-        <FaAirbnb className="text-white text-xl"/>
+        <Image
+          src="/SITE - CABANA QUATRO ESTAÇÕES/01 - MENU/LOGO/airbnbB.png"
+          alt="Airbnb"
+          width={24}
+          height={24}
+        /> 
       </a>
       <a href="https://www.booking.com/Share-N86BXf" target="_blank">
-        <span className="font-bold text-white border-2 border-white rounded px-1">B.</span>
+        <Image
+          src="/SITE - CABANA QUATRO ESTAÇÕES/01 - MENU/LOGO/bookingB.png"
+          alt="Booking"
+          width={24}
+          height={24}
+        />
       </a>
     </div>
     
