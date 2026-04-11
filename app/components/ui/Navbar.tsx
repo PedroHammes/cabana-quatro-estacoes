@@ -5,6 +5,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import Image from "next/image"
 
 import { FaAirbnb } from "react-icons/fa"
 
@@ -15,7 +16,13 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     fixed top-0 left-0 right-0 z-50
     bg-background
     ">
-    <img alt="LOGO-cabanaquatroestacoes"></img>
+    <Image
+      src="/SITE - CABANA QUATRO ESTAÇÕES/01 - MENU/LOGO/logo branca.png"
+      alt="Cabana Quatro Estações"
+      width={120}
+      height={40}
+      className="objetc-contain"
+    />
     <div className="md:hidden">
         <Sheet>
             <SheetTrigger>Menu</SheetTrigger>
