@@ -61,7 +61,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
 
       <a href="https://www.airbnb.com.br/rooms/1400061823556658830?guests=1&adults=1&s=67&unique_share_id=77cdcf28-af7f-4b2a-a09f-d209e4e47331" target="_blank">
         <Image
-          src="/SITE - CABANA QUATRO ESTAÇÕES/01 - MENU/LOGO/airbnbB.png"
+          src="/ux/01-navbar/logos/airbnbB.png"
           alt="Airbnb"
           width={24}
           height={24}
@@ -69,7 +69,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
       </a>
       <a href="https://www.booking.com/Share-N86BXf" target="_blank">
         <Image
-          src="/ux/01-navbar/LOGO/bookingB.png"
+          src="/ux/01-navbar/logos/bookingB.png"
           alt="Booking"
           width={24}
           height={24}
