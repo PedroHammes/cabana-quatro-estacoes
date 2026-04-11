@@ -11,21 +11,21 @@ export default function Partnerships() {
     const partnerships = [
         {
             id: 1,
-            title: "Passeios",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur asperiores rem optio neque et vero quae error ab totam facilis.",
-            image: "/images/20260315_180506.jpg"
+            title: "Passeios de Bugre: Alferes Extremo",
+            description: "Passeios na região: Para os que gostam de explorar, temos indicações de passeios pela região, proporcionando contato com a natureza e experiências únicas.",
+            image: "/ux/05-partnerships/photos/alferesextremo.png"
         },
         {
             id: 2,
-            title: "Trilhas",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur asperiores rem optio neque et vero quae error ab totam facilis.",
-            image: "/images/20260315_180506.jpg"
+            title: "Ninha Estética Massoterapeuta",
+            description: "Bem-estar: Também indicamos serviços de massoterapia, ideais para quem deseja relaxar e aproveitar momentos de descanso na cabana.",
+            image: "/ux/05-partnerships/photos/ninhaestetica.png"
         },
         {
             id: 3,
-            title: "Turismo",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur asperiores rem optio neque et vero quae error ab totam facilis.",
-            image: "/images/20260315_180506.jpg"
+            title: "Padaria Ágape",
+            description: "Café da manhã: Disponibilizamos o fornecimento de deliciosas cestas de café da manhã preparadas pela Padaria Ágape, perfeitas para começar o dia com muito sabor e conforto.",
+            image: "/ux/05-partnerships/photos/padariaagape.png"
         }
     ]
 

@@ -14,14 +14,16 @@ import React from "react";
 
 export default function Structure() {
     const rooms = [
-        { index: 1, title: "Sala", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
+        { index: 1, title: "Sala", description: "Internet - TV  - Vitrola Retrô - Iluminação aconchegante - Decoração - Sofá - Mini adega de vinhos", image: "/ux/04-structure/photos/sala.jpg"
         },
-        { index: 2, title: "Cozinha", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
+        { index: 2, title: "Cozinha", description: "Forno elétrico - Air Fryer - Máquina de café - Água Potável - Pipoqueira - Cooktop 4 bocas - Liquidificador - Aparelho de Fondue - Panelas e Taças - Sanduicheira - Abridor de vinho - Ralador - Mesa para café da manhã na cama - Garrafa térmica - Toalha de picnic", image: "/ux/04-structure/photos/cozinha.jpg"
         },
-        { index: 3, title: "Varanda", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
+        { index: 3, title: "Banheiro", description: "Choveiro com água aquecida - Toalhas - Papel higiênico", image: "/ux/04-structure/photos/banheiro.jpg"
         },
-        { index: 4, title: "Quarto", description: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem ullam voluptas esse natus quam fugit aliquam neque, explicabo distinctio?", image: "https://placehold.co/800x600"
-        }
+        { index: 4, title: "Quarto", description: "Cama - Ar condicionado - Travesseiros e lençóis - Persiana elétrica", image: "/ux/04-structure/photos/quarto.jpg"
+        },
+        { index: 5, title: "Área Externa", description: "Ofurô relaxante aquecido - Fogo de Chão - Pergolado - Balanço - Rendário - Chuveirão no quintal - Mirante com vista - Churrasqueira", image: "/ux/04-structure/photos/area-externa.jpg"
+    }
     ]
 
     const [api, setApi] = React.useState<CarouselApi>()
@@ -46,7 +48,7 @@ export default function Structure() {
     <div className="
     flex flex-col flex-1 h-full md:flex-row md:min-h-80
     rounded-2xl overflow-visible
-    bg-olive-500
+    bg-[#698061] text-white
     ">
         <Carousel setApi={setApi} opts={{ align: "center", containScroll: false }} className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
             <CarouselContent className="-ml-4 h-full">
