@@ -19,7 +19,7 @@ export default function Hero() {
     flex flex-col items-start gap-4 w-full px-12 md:px-24
     ">
       <Image
-      src={"/ux/01-navbar/LOGO/B.png"}
+      src={"/ux/01-navbar/logos/B.png"}
       alt="Luxo na natureza"
       width={400}
       height={200}
