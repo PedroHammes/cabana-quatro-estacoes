@@ -1,11 +1,13 @@
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from "next/image";
+import React from "react";
 
 export default function Partnerships() {
     const partnerships = [
@@ -28,45 +30,51 @@ export default function Partnerships() {
             image: "/ux/05-partnerships/photos/padariaagape.png"
         }
     ]
-
+    const [api, setApi] = React.useState<CarouselApi>()
+    const [current, setCurrent] = React.useState(0)
+    
     return <section id="partnerships"
     className="
     snap-start h-screen
-    py-16 md:py-32 px-4 lg:px-0 lg:mx-32 max-w-full
-    flex flex-col flex-1 items-center justify-center
+    py-16 md:py-32 mx-4 lg:mx-32
+    flex flex-col items-center justify-center
     ">
         {/* Card Principal */}
         <div className="
-        flex flex-col flex-1 h-full md:flex-row md:min-h-80 w-full
+        w-full h-[70vh]
         rounded-2xl overflow-hidden
-      bg-olive-500
+        bg-[#698061] text-white
         ">
-            <Carousel className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
-                <CarouselContent className="-ml-4 h-full">
+            <Carousel
+            setApi={setApi}
+            opts={{ align: "center", loop: true }}
+            className="w-full h-full [&>div]:h-full">
+                <CarouselContent className="h-full">
                 {
                     partnerships.map((partner) => {
-                        return <CarouselItem key={partner.id}
-                        className="
-                        basis-full h-full transition-all duration-500
-                        ">
-                            <div className="
-                            relative h-full rounded-2xl overflow-hidden
-                            flex flex-col
-                            ">
-                                < Image
-                                src={partner.image}
-                                alt={partner.title}
-                                fill
-                                className="object-cover"
-                                />
-                                <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
-                                <div className="relative mt-auto p-4 z-10">
-                                    <h3>{partner.title}</h3>
-                                    <p>{partner.description}</p>
+                        return (
+                            <CarouselItem key={partner.id}
+                                className="basis-5/5 h-full transition-opacity duration-500">
+                                <div className="relative h-full overflow-hidden flex flex-col">
+                                    <Image
+                                        src={partner.image}
+                                        alt={partner.title}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
+                                    <div className="
+                                        relative z-10 h-full
+                                        flex flex-col justify-center items-end
+                                        p-8 md:p-16 text-right max-w-[50%] ml-auto
+                                    ">
+                                        <h3>{partner.title}</h3>
+                                        <p>{partner.description}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </CarouselItem>
-                    })
+                            </CarouselItem>
+                        )
+})
                 }
                 </CarouselContent>
                 <CarouselPrevious />

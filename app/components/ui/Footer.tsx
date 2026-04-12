@@ -45,7 +45,9 @@ export default function Footer(Props: {setOpen: (value: boolean) => void}) {
                         </a>
                     </div>
                 </div>
-                <Button onClick={() => Props.setOpen(true)} className="w-fit">
+                <Button onClick={() => Props.setOpen(true)} className="w-fit rounded-full"
+                style={{ color: '#ffffff', fontWeight: 'bold' }}
+                >
                     Faça sua reserva
                 </Button>
             </div>

@@ -28,7 +28,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     flex items-center justify-between
     fixed top-0 left-0 right-0 z-50
     transition-opacity duration-300
-    ${isHero ? "bg-transparent" : "bg-background"}
+    ${isHero ? "bg-transparent" : "bg-olive-500"}
     `}>
     <Image
       src="/ux/01-navbar/logos/B.png"

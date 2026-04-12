@@ -39,48 +39,46 @@ export default function Structure() {
     
   return <section id="structure"
   className="
-  snap-start h-screen
-  py-16 md:py-32 mx-0 px-4 lg:mx-32
-  flex flex-col flex-1 items-center justify-center
+    snap-start h-screen
+    py-16 md:py-32 mx-4 lg:mx-32
+    flex flex-col items-center justify-center
   ">
 
-    {/*Card principal*/}
     <div className="
-    flex flex-col flex-1 h-full md:flex-row md:min-h-80
-    rounded-2xl overflow-visible
-    bg-[#698061] text-white
+      w-full h-[70vh]
+      rounded-2xl overflow-hidden
+      bg-[#698061] text-white
     ">
-        <Carousel setApi={setApi} opts={{ align: "center", containScroll: false }} className="w-full h-full flex-1 min-h-0 [&>div]:h-full">
-            <CarouselContent className="-ml-4 h-full">
+        <Carousel
+          setApi={setApi}
+          opts={{ align: "center", loop: true }}
+          className="w-full h-full [&>div]:h-full"
+        >
+            <CarouselContent className="h-full">
                 {
-                    rooms.map( (room, index) => {
-                        const isActive = index == current
-                            return (
+                    rooms.map((room, index) => {
+                        const isActive = index === current
+                        return (
                             <CarouselItem key={room.index}
-                            className={isActive 
-                                    ? "basis-[60%] lg:basis-[60%] h-full transition-all duration-500"
-                                    : "basis-[40%] lg:basis-[60%] h-full transition-all duration-500"}
-                                >
-                                <div className="
-                                relative h-full rounded-2xl overflow-hidden
-                                flex flex-col
-                                ">
+                                className={`basis-3/5 h-full transition-opacity duration-500 ${
+                                    isActive ? "opacity-100" : "opacity-40"
+                                }`}
+                            >
+                                <div className="relative h-full overflow-hidden flex flex-col">
                                     <Image
                                         src={room.image}
                                         fill
                                         alt={room.title}
                                         className="object-cover"
                                     />
-                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div> 
-                                    <div className="
-                                    relative mt-auto p-4 z-10
-                                    ">
+                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
+                                    <div className="relative mt-auto p-4 z-10">
                                         <h3>{room.title}</h3>
                                         {isActive && <p>{room.description}</p>}
                                     </div>
                                 </div>
                             </CarouselItem>
-                            )
+                        )
                     })
                 }
             </CarouselContent>
@@ -88,12 +86,5 @@ export default function Structure() {
             <CarouselNext />
         </Carousel>
     </div>
-
-
-    {/* <div className="flex justify-center mt-4">
-        <Button>
-            Veja todas as fotos
-        </Button>
-    </div> */}
-  </section>
+</section>
 }

@@ -26,9 +26,9 @@ export default function Testimonials() {
         i % 3 === 0 ? [...acc, testimonials.slice(i, i + 3)] : acc, [] as typeof testimonials[]
     )
 
-    return <section id="testimonials"
+return <section id="testimonials"
     className="
-    snap-start h-screen py-16 md:py-32 mx-0 lg:mx-32 px-4 flex flex-col flex-1 items-center justify-center max-w-full gap-8
+    snap-start h-screen py-16 md:py-32 mx-4 lg:mx-32 flex flex-col items-center justify-center gap-8
     ">
 
     {/* Contador */}
@@ -46,31 +46,31 @@ export default function Testimonials() {
             <Star className="fill-yellow-400 text-yellow-400"/>
             <Star className="fill-yellow-400 text-yellow-400"/>
         </div>
-
     </div>
 
     {/*Card principal*/}
     <div className="
-    flex flex-col flex-1 h-full md:flex-row md:min-h-80 rounded-2xl overflow-hidden bg-olive-500 min-w-0 w-full
+        w-full
+        rounded-2xl overflow-hidden bg-[#698061] text-white
     ">
-        <Carousel className="w-full h-full flex-1 min-h-0 [&>div]:h-full overflow-hidden">
-            <CarouselContent className="-ml-4 h-full">
+        <Carousel className="w-full h-full [&>div]:h-full overflow-hidden">
+            <CarouselContent className="h-full">
                 {chunks.map((chunk, i) => (
-                    <CarouselItem key={i} className="h-full basis-full pl-4">
-                        <div className="flex flex-col gap-4 h-full">
+                    <CarouselItem key={i} className="h-full basis-full">
+                        <div className="flex flex-row gap-6 h-full p-6">
                             {chunk.map((feedback) => (
-                                <div key={feedback.id} className="bg-card rounded-2xl p-4 flex-1 overflow-hidden w-full min-w-0">
-                                    <div className="flex flex-row items-center gap-2">
-                                        <Avatar>
+                                <div key={feedback.id} className="bg-card rounded-2xl p-5 flex-1 overflow-hidden min-w-0 flex flex-col gap-2">
+                                    <div className="flex flex-row items-center gap-3">
+                                        <Avatar className="w-8 h-8">
                                             <AvatarImage src={feedback.image} alt={feedback.name} />
-                                            <AvatarFallback>{feedback.name[0]}{feedback.lastname[0]}</AvatarFallback>
+                                            <AvatarFallback className="text-xs">{feedback.name[0]}{feedback.lastname[0]}</AvatarFallback>
                                         </Avatar>
-                                        <p>{feedback.name}</p>
+                                        <p className="font-semibold text-sm">{feedback.name}</p>
                                     </div>
-                                    <p>{feedback.text}</p>
-                                    <div className="flex flex-row justify-between">
-                                        <p>{feedback.date}</p>
-                                        <p>{feedback.rating} <Star className="fill-yellow-400 text-yellow-400 inline" /></p>
+                                    <p className="text-sm leading-snug">{feedback.text}</p>
+                                    <div className="flex flex-row justify-between items-center mt-auto pt-2">
+                                        <p className="text-xs text-muted-foreground">{feedback.date}</p>
+                                        <p className="text-sm">{feedback.rating} <Star className="fill-yellow-400 text-yellow-400 inline w-4 h-4" /></p>
                                     </div>
                                 </div>
                             ))}
@@ -90,6 +90,5 @@ export default function Testimonials() {
             </a>
         </Button>
     </div>
-
-    </section>
+</section>
 }
