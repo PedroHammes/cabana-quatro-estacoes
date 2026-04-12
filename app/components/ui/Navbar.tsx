@@ -6,14 +6,30 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
-  return <nav className="
+  const [isHero, setIsHero] = useState(true)
+  
+  useEffect(() => {
+    const hero = document.getElementById("hero")
+    if (!hero) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsHero(entry.isIntersecting),
+      { threshold: 0.5 }
+    )
+    observer.observe(hero)
+    return () => observer.disconnect()
+  }, [])
+
+
+  return <nav className={`
     px-6 py-3
     flex items-center justify-between
     fixed top-0 left-0 right-0 z-50
-    bg-background
-    ">
+    transition-opacity duration-300
+    ${isHero ? "bg-transparent" : "bg-background"}
+    `}>
     <Image
       src="/ux/01-navbar/logos/B.png"
       alt="Cabana Quatro Estações"
