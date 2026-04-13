@@ -7,7 +7,6 @@ export default function Location(Props: {setOpen: (value: boolean) => void}) {
     min-h-screen
     py-16 md:py-32 mx-4 lg:mx-32
     flex flex-col items-center justify-center
-    bg-red-500
   ">
     {/* Card principal */}
     <div className="

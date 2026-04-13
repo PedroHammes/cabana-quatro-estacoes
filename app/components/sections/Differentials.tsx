@@ -40,7 +40,6 @@ export default function Differentials() {
     h-screen
     py-16 md:py-32 mx-4 lg:mx-32
     flex flex-col items-center justify-center
-    bg-pink-500
   ">
 
     <div className="

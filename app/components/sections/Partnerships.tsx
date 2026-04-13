@@ -38,7 +38,6 @@ export default function Partnerships() {
     h-screen
     py-16 md:py-32 mx-4 lg:mx-32
     flex flex-col items-center justify-center
-    bg-green-500
     ">
         {/* Card Principal */}
         <div className="

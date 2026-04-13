@@ -6,7 +6,7 @@ export default function About() {
   h-full
   py-16 md:py-32 mx-4 lg:mx-32
   flex flex-col flex-1 items-center justify-center
-  bg-amber-500
+
   ">
 
     {/*Card principal*/}
