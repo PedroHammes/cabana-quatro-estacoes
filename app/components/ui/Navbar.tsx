@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/sheet"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { Menu, MenuIcon } from "lucide-react"
 
 export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
   const [isHero, setIsHero] = useState(true)
@@ -24,7 +25,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
 
 
   return <nav className={`
-    px-6 py-3
+    px-8 md:px-24 py-3
     flex items-center justify-between
     fixed top-0 left-0 right-0 z-50
     transition-opacity duration-300
@@ -39,7 +40,9 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     />
     <div className="md:hidden">
         <Sheet>
-            <SheetTrigger>Menu</SheetTrigger>
+            <SheetTrigger>
+              <Menu className="w-6 h-6" />
+            </SheetTrigger>
             <SheetContent
             showCloseButton={false}
             side="left"
@@ -75,7 +78,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
         FAÇA SUA RESERVA
       </Button>
 
-      <a href="https://www.airbnb.com.br/rooms/1400061823556658830?guests=1&adults=1&s=67&unique_share_id=77cdcf28-af7f-4b2a-a09f-d209e4e47331" target="_blank">
+      <a href="https://www.airbnb.com.br/rooms/1400061823556658830?guests=1&adults=1&s=67&unique_share_id=77cdcf28-af7f-4b2a-a09f-d209e4e47331" target="_blank" className="hidden md:block">
         <Image
           src="/ux/01-navbar/logos/airbnbB.png"
           alt="Airbnb"
@@ -83,7 +86,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
           height={24}
         /> 
       </a>
-      <a href="https://www.booking.com/Share-N86BXf" target="_blank">
+      <a href="https://www.booking.com/Share-N86BXf" target="_blank" className="hidden md:block">
         <Image
           src="/ux/01-navbar/logos/bookingB.png"
           alt="Booking"

@@ -44,47 +44,64 @@ export default function Structure() {
     flex flex-col items-center justify-center
   ">
 
-    <div className="
-      w-full h-[70vh]
-      rounded-2xl overflow-hidden
-    text-white
-    ">
+    <div className="w-full h-[70vh] rounded-2xl text-white">
         <Carousel
-          setApi={setApi}
-          opts={{ align: "center", loop: true }}
-          className="w-full h-full [&>div]:h-full"
+        setApi={setApi}
+        opts={{ align: "center", loop: true }}
+        className="w-full h-full [&>div]:h-full"
         >
             <CarouselContent className="h-full">
-                {
-                    rooms.map((room, index) => {
-                        const isActive = index === current
-                        return (
-                            <CarouselItem key={room.index}
-                                className={`basis-5/5 md:basis-3/5 h-full transition-opacity duration-500 ${
-                                    isActive ? "opacity-100" : "opacity-40"
-                                }`}
-                            >
-                                <div className="relative h-full overflow-hidden flex flex-col rounded-2xl">
-                                    <Image
-                                        src={room.image}
-                                        fill
-                                        alt={room.title}
-                                        className="object-cover"
-                                    />
-                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
-                                    <div className="relative mt-auto p-4 z-10">
-                                        <h3>{room.title}</h3>
-                                        {isActive && <p>{room.description}</p>}
-                                    </div>
+                {rooms.map((room, index) => {
+                    const isActive = index === current
+                    return (
+                        <CarouselItem key={room.index}
+                            className={`basis-5/5 md:basis-3/5 h-full transition-opacity duration-500 rounded-2xl overflow-hidden ${
+                                isActive ? "opacity-100" : "opacity-40"
+                            }`}
+                        >
+                            <div className="relative h-full overflow-hidden flex flex-col rounded-[50px] border-4 border-red-500">
+                                <Image
+                                src={room.image}
+                                fill
+                                alt={room.title}
+                                className="object-cover"
+                                />
+                                <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
+                                <div className="relative mt-auto p-4 z-10">
+                                    <h3>{room.title}</h3>
+                                    {isActive && <p>{room.description}</p>}
                                 </div>
-                            </CarouselItem>
-                        )
-                    })
-                }
+                            </div>
+                        </CarouselItem>
+                    )
+                })}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
         </Carousel>
+    </div>
+
+    {/* Botões de navegação do carousel */}
+    <div className="flex items-center gap-4 mt-4">
+        <Button variant="outline" onClick={() => api?.scrollPrev()}>
+            <Image 
+            src="/ux/Assets/arrows/left-green.png"
+            width={20}
+            height={20}
+            alt="Previous" />
+        </Button>
+        <span>
+            <Button
+            className="border-2 border-[#ffffff] bg-transparent rounded-full"
+            >
+                Veja todas as fotos
+            </Button>
+        </span>
+        <Button variant="outline" onClick={() => api?.scrollNext()}>
+            <Image 
+            src="/ux/Assets/arrows/right-green.png"
+            width={20}
+            height={20}
+            alt="Next" />
+        </Button>
     </div>
 </section>
 }
