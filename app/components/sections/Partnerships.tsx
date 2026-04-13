@@ -38,12 +38,13 @@ export default function Partnerships() {
     h-screen
     py-16 md:py-32 mx-4 lg:mx-32
     flex flex-col items-center justify-center
+    bg-green-500
     ">
         {/* Card Principal */}
         <div className="
-        w-full h-[70vh]
+        w-full h-6/12 lg:h-8/12
         rounded-2xl overflow-hidden
-        bg-[#698061] text-white
+        text-white
         ">
             <Carousel
             setApi={setApi}

@@ -42,9 +42,12 @@ export default function Structure() {
     h-screen
     py-16 md:py-32 mx-4 lg:mx-32
     flex flex-col items-center justify-center
+      bg-blue-500
   ">
-
-    <div className="w-full h-[70vh] rounded-2xl text-white">
+    {/* Carousel */}
+    <div className="
+    w-full h-5/12 lg:h-8/12 rounded-2xl text-white
+    ">
         <Carousel
         setApi={setApi}
         opts={{ align: "center", loop: true }}
@@ -59,7 +62,7 @@ export default function Structure() {
                                 isActive ? "opacity-100" : "opacity-40"
                             }`}
                         >
-                            <div className="relative h-full overflow-hidden flex flex-col rounded-[50px] border-4 border-red-500">
+                            <div className="relative h-full overflow-hidden flex flex-col rounded-2xl">
                                 <Image
                                 src={room.image}
                                 fill
@@ -67,7 +70,13 @@ export default function Structure() {
                                 className="object-cover"
                                 />
                                 <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
-                                <div className="relative mt-auto p-4 z-10">
+                                <div className="
+                                px-4 lg:px-8 py-8 lg-py-16
+                                flex flex-col gap-4 lg:gap-8
+                                relative overflow-hidden
+                                text-base lg:text-lg text-olive-50
+                                mt-auto z-10
+                                ">
                                     <h3>{room.title}</h3>
                                     {isActive && <p>{room.description}</p>}
                                 </div>
