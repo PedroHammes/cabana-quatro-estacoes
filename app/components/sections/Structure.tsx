@@ -47,7 +47,7 @@ export default function Structure() {
     <div className="
       w-full h-[70vh]
       rounded-2xl overflow-hidden
-      bg-[#698061] text-white
+    text-white
     ">
         <Carousel
           setApi={setApi}
@@ -60,11 +60,11 @@ export default function Structure() {
                         const isActive = index === current
                         return (
                             <CarouselItem key={room.index}
-                                className={`basis-3/5 h-full transition-opacity duration-500 ${
+                                className={`basis-5/5 md:basis-3/5 h-full transition-opacity duration-500 ${
                                     isActive ? "opacity-100" : "opacity-40"
                                 }`}
                             >
-                                <div className="relative h-full overflow-hidden flex flex-col">
+                                <div className="relative h-full overflow-hidden flex flex-col rounded-2xl">
                                     <Image
                                         src={room.image}
                                         fill

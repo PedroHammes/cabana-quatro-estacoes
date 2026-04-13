@@ -44,32 +44,32 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
             showCloseButton={false}
             side="left"
             >
-                <a href="#">INICIO</a>
+                <a href="#">INÍCIO</a>
                 <a href="#about">SOBRE</a>
                 <a href="#partnerships">PARCERIAS</a>
                 <a href="#location">LOCALIZAÇÃO</a>
                 <a href="#testimonials">DEPOIMENTOS</a>
                 <a href="#availability">DISPONIBILIDADE</a>
-                <a href="#teams">EQUIPE</a>
+                <a href="#team">ATENDIMENTO</a>
             </SheetContent>
         </Sheet>
     </div>
 
 
     <div className="hidden md:flex justify-around gap-6">
-        <a href="#">INICIO</a>
+        <a href="#hero">INÍCIO</a>
         <a href="#about">SOBRE</a>
         <a href="#partnerships">PARCERIAS</a>
         <a href="#location">LOCALIZAÇÃO</a>
         <a href="#testimonials">DEPOIMENTOS</a>
         <a href="#availability">DISPONIBILIDADE</a>
-        <a href="#team">EQUIPE</a>
+        <a href="#team">ATENDIMENTO</a>
     </div>
 
     <div className="flex items-center gap-2">
       <Button
       onClick={() => Props.setOpen(true)}
-      className="rounded-full"
+      className="rounded-full  hover:bg-[#4a5c44] hover:color-[#FFFFFF]  cursor-pointer"
       style={{ color: '#ffffff', fontWeight: 'bold' }}
       >
         FAÇA SUA RESERVA

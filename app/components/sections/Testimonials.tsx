@@ -51,7 +51,7 @@ return <section id="testimonials"
     {/*Card principal*/}
     <div className="
         w-full
-        rounded-2xl overflow-hidden bg-[#698061] text-white
+        rounded-2xl overflow-hidden text-white
     ">
         <Carousel className="w-full h-full [&>div]:h-full overflow-hidden">
             <CarouselContent className="h-full">
@@ -84,7 +84,10 @@ return <section id="testimonials"
     </div>
 
     <div className="flex justify-center">
-        <Button asChild>
+        <Button asChild
+        className="rounded-full  hover:bg-[#4a5c44] hover:color-[#FFFFFF]  cursor-pointer"
+        style={{ color: '#ffffff', fontWeight: 'bold' }}
+        >
             <a href="https://www.google.com/travel/search?q=cabana%20quatro%20esta%C3%A7%C3%B5es&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C121529349&hl=pt-BR&gl=br&cs=1&ssta=1&ts=CAEaRQonEiUyIzB4OTkxYjM0NzI2NTE2NGI6MHgzYzI2YzQyOWU1NDdiNTY3EhoSFAoHCOoPEAQYBRIHCOoPEAQYBhgBMgIQAA&qs=CAEyE0Nnb0k1LXFlcXA2RnNaTThFQUU4AkIJCWe1R-UpxCY8QgkJZ7VH5SnEJjw&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiYuNiN5c-TAxUAAAAAHQAAAAAQBA" target="_blank">
                 Deixe seu depoimento
             </a>

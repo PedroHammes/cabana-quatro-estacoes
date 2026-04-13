@@ -45,10 +45,11 @@ export default function Footer(Props: {setOpen: (value: boolean) => void}) {
                         </a>
                     </div>
                 </div>
-                <Button onClick={() => Props.setOpen(true)} className="w-fit rounded-full"
+                <Button onClick={() => Props.setOpen(true)} 
+                className="w-fit rounded-full hover:bg-[#4a5c44] hover:color-[#FFFFFF]  cursor-pointer"
                 style={{ color: '#ffffff', fontWeight: 'bold' }}
                 >
-                    Faça sua reserva
+                    FAÇA SUA RESERVA
                 </Button>
             </div>
 
@@ -57,27 +58,27 @@ export default function Footer(Props: {setOpen: (value: boolean) => void}) {
                 <div className="flex flex-col gap-4">
                     <h3>Vantagens de reservar diretamente conosco</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-emerald-950  h-40 w-40 p-2">
+                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-[#4a5c44]  h-40 w-40 p-2">
                             <BadgeDollarSign />
                             <p>MELHORES PREÇOS</p>
                         </div>
-                        <div className="flex flex-col items-center justify-around text-center rounded-lg bg-emerald-950 gap-x-2 gap-y-2 h-40 w-40 p-2">
+                        <div className="flex flex-col items-center justify-around text-center rounded-lg bg-[#4a5c44] gap-x-2 gap-y-2 h-40 w-40 p-2">
                             <TicketPercent />
                             <p>PROMOÇÕES EXCLUSIVAS</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-emerald-950  h-40 w-40 p-2">
+                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-[#4a5c44]  h-40 w-40 p-2">
                             <HandCoins />
                             <p>DESCONTO NO RETORNO</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-emerald-950  h-40 w-40 p-2">
+                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-[#4a5c44]  h-40 w-40 p-2">
                             <Handshake />
                             <p>SEGURANÇA NO CONTRATO</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-emerald-950  h-40 w-40 p-2">
+                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-[#4a5c44]  h-40 w-40 p-2">
                             <HandHeart />
                             <p>ATENDIMENTO HUMANIZADO</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-emerald-950  h-40 w-40 p-2">
+                        <div className="flex flex-col items-center justify-center text-center rounded-lg bg-[#4a5c44]  h-40 w-40 p-2">
                             <Star />
                             <p>EXPERIÊNCIA ÚNICA</p>
                         </div>

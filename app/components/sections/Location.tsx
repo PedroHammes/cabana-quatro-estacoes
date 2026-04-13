@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Location(Props: {setOpen: (value: boolean) => void}) {
   return <section id="location"
   className="
-  snap-start h-screen max-w-full
-  py-16 md:py-32 px-4 mx-0 lg:mx-32
-  flex flex-col flex-1 items-center justify-center
+    snap-start h-screen
+    py-16 md:py-32 mx-4 lg:mx-32
+    flex flex-col items-center justify-center
   ">
     {/* Card principal */}
     <div className="
@@ -29,40 +29,20 @@ export default function Location(Props: {setOpen: (value: boolean) => void}) {
       {/* Card da direita */}
       <div className="relative rounded-2xl overflow-hidden w-full md:w-6/10 h-full text-white">
         <Image
-        src="/ux/06-location/location.png"
-        fill
-        alt="Como chegar"
-        className="object-cover"
+          src="/ux/06-location/location.png"
+          fill
+          alt="Como chegar"
+          className="object-cover"
         />
-        <div
-        className="
-        absolute inset-0 z-5 bg-linear-to-b from-transparent to-black/70
-        "></div>
-        <div
-        className="
-        absolute bottom-0 left-0 right-0 p-8
-        ">
-          <h3>Como chegar</h3>
+        <div className="absolute inset-0 z-5 bg-linear-to-b from-transparent to-black/70"></div>
+        <div className="absolute inset-0 z-10 flex items-center p-8">
           <p>
-            <strong>Endereço:</strong><br />
-            Condomínio Fazenda Boa Vista – Estrada Sítio Barreiros, nº 1.801, Casa 3 <br />
-            – Fazenda Boa Vista, Bairro Maravilha – Paty do Alferes – CEP 26.950-000.
+            Localizada no Vale do Café no Estado do Rio de Janeiro, a 112 km do Rio de Janeiro, e a 4 km do Vale das Videiras, em Araras, Petrópolis.
           </p>
-          <p className="bg-destructive rounded-lg p-4">
-              <strong>Atenção!</strong>
-              <br/>
-              Para quem vem pelo <strong>Vale das Videiras</strong>, <strong>Araras</strong> ou <strong>Petrópolis</strong>:
-              Siga sempre pela RJ-117 até o Posto de Saúde de Maravilha / Paty do Alferes.
-          </p>
-          <p>
-            Insira o endereço no GPS antes de entrar na estrada de terra, pois o sinal pode oscilar na região rural
-          </p>
-          <Button onClick={() => Props.setOpen(true)}>
-            Entre em contato
-          </Button>
         </div>
       </div>
 
     </div>
+
   </section>
 }
