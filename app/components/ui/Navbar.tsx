@@ -25,7 +25,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
 
 
   return <nav className={`
-    px-8 md:px-24 py-3
+    px-8 md:px-32 py-3
     flex items-center justify-between
     fixed top-0 left-0 right-0 z-50
     transition-opacity duration-300

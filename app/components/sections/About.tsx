@@ -11,8 +11,8 @@ export default function About() {
     {/*Card principal*/}
     <div className="
     flex flex-col flex-1 h-full md:flex-row md:min-h-80
-    rounded-2xl overflow-hidden
-    bg-olive-500
+    rounded-2xl overflow-hidden 
+    bg-[#a9a685]
     ">
         <div className="
         relative h-48 md:h-auto w-full md:w-1/2
