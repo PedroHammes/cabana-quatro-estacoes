@@ -42,7 +42,7 @@ export default function Partnerships() {
     ">
         {/* Card Principal */}
         <div className="
-        w-full h-6/12 lg:h-8/12
+        w-full h-6/12 lg:h-10/12
         rounded-2xl overflow-hidden
         text-white
         ">
@@ -63,11 +63,13 @@ export default function Partnerships() {
                                         fill
                                         className="object-cover"
                                     />
-                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
+                                    <div className="absolute inset-0 z-5 bg-linear-to-l from-black/90 to-transparent"></div>
                                     <div className="
-                                        relative z-10 h-full
-                                        flex flex-col justify-center items-end
-                                        p-8 md:p-16 text-right max-w-[50%] ml-auto
+                                    relative z-10 h-full
+                                    flex flex-col justify-end lg:justify-center lg:max-w-[50%]
+                                    p-4 lg:p-8 lg:ml-auto
+                                    text-left
+                                    text-base lg:text-lg
                                     ">
                                         <h3>{partner.title}</h3>
                                         <p>{partner.description}</p>
