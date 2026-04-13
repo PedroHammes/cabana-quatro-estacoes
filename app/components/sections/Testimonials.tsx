@@ -28,7 +28,7 @@ export default function Testimonials() {
 
 return <section id="testimonials"
     className="
-    snap-start h-screen py-16 md:py-32 mx-4 lg:mx-32 flex flex-col items-center justify-center gap-8
+    h-screen py-16 md:py-32 mx-4 lg:mx-32 flex flex-col items-center justify-center gap-8
     ">
 
     {/* Contador */}

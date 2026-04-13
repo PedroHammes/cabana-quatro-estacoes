@@ -6,7 +6,7 @@ export default function Hero() {
   h-screen relative
   flex items-center justify-center
   bg-neutral-800
-  snap-start min-h-screen
+  min-h-screen
   ">
     <video
     autoPlay muted loop playsInline

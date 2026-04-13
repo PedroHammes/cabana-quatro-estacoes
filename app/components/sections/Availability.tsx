@@ -34,7 +34,7 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
   
   return <section id="availability"
   className="
-  snap-start h-screen
+  h-screen
   py-16 md:py-32 mx-0 lg:mx-32 px-4 max-w-full
   flex flex-col flex-1 items-center justify-center
   ">

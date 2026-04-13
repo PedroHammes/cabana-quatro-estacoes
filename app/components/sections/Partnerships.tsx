@@ -35,7 +35,7 @@ export default function Partnerships() {
     
     return <section id="partnerships"
     className="
-    snap-start h-screen
+    h-screen
     py-16 md:py-32 mx-4 lg:mx-32
     flex flex-col items-center justify-center
     ">

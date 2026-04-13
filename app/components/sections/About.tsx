@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function About() {
   return <section id="about" 
   className="
-  snap-start h-screen
+  h-screen
   py-16 md:py-32 mx-4 lg:mx-32
   flex flex-col flex-1 items-center justify-center
   ">
