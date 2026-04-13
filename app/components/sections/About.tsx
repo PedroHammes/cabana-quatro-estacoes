@@ -3,19 +3,21 @@ import Image from "next/image";
 export default function About() {
   return <section id="about" 
   className="
-  h-screen
+  h-full
   py-16 md:py-32 mx-4 lg:mx-32
   flex flex-col flex-1 items-center justify-center
+  bg-amber-500
   ">
 
     {/*Card principal*/}
     <div className="
-    flex flex-col flex-1 h-full md:flex-row md:min-h-80
+    h-full 
+    flex flex-col md:flex-row md:min-h-80
     rounded-2xl overflow-hidden 
     bg-[#a9a685]
     ">
         <div className="
-        relative h-48 md:h-auto w-full md:w-1/2
+        relative h-48 md:h-auto w-full md:w-2/5
         ">
             <Image
                 src="/ux/03-about/about.png"
@@ -29,9 +31,10 @@ export default function About() {
         </div>
         <div className="
         flex-1
-        p-8
-        flex flex-col gap-8
+        p-4 lg:p-8
+        flex flex-col gap-4 lg:gap-8
         relative overflow-hidden
+        text-base lg:text-lg text-olive-900
         ">
             <h2>A Cabana</h2>
             <p>
