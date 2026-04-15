@@ -61,7 +61,6 @@ export default function Structure() {
                         <CarouselItem key={room.index}
                             className={`
                                 basis-4/5 md:basis-3/5 h-full
-                                bg-[#a9a685]
                                 transition-opacity duration-500 
                                 rounded-2xl overflow-hidden
                                 p-2
@@ -77,9 +76,9 @@ export default function Structure() {
                                 />
                             </div>
                             <div className="
-                            flex-1 p-2 lg:p-8 flex flex-col gap-2 py-8 lg-py-16
+                            flex-1 p-2 lg:p-8 flex flex-col gap-2 py-8 lg-py-16 rounded-b-2xl
                             lg:gap-8
-                            text-justify text-base lg:text-lg text-olive-950
+                            text-justify text-base lg:text-lg bg-[#a9a685] text-olive-950
                             ">
                                 <h3>{room.title}</h3>
                                 {isActive && <p>{room.description}</p>}
