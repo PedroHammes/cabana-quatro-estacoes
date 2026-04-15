@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function Location(Props: {setOpen: (value: boolean) => void}) {
   return <section id="location"
   className="
-    min-h-screen
     py-16 md:py-32 mx-4 lg:mx-32
     flex flex-col items-center justify-center
   ">

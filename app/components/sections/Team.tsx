@@ -16,8 +16,7 @@ export default function Team(Props: {setOpen: (value: boolean) => void}) {
   return <section id="team" className="snap-start ">
     <div 
     className="
-    h-screen
-    py-16 md:py-32 mx-0 lg:mx-32 px-4 max-w-full
+    py-8 md:py-16 mx-0 lg:mx-32 px-4 max-w-full
     flex flex-col flex-1 items-center justify-center
     ">
         <div className="
