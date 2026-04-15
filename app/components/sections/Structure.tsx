@@ -39,7 +39,7 @@ export default function Structure() {
     
   return <section id="structure"
   className="
-    py-8 md:py-16 mx-4 lg:mx-32
+    mx-4 lg:mx-32
     flex flex-col items-center justify-center
     
   ">
