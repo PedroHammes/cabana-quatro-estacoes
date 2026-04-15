@@ -38,6 +38,7 @@ export default function Partnerships() {
     py-8 md:py-16  mx-4 lg:mx-32
     flex flex-col items-center justify-center
     ">
+        <h2>Parceiros</h2>
         {/* Card Principal */}
         <div className="
         w-full h-6/12 lg:h-10/12

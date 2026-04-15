@@ -46,7 +46,7 @@ export default function Structure() {
     <h2>Estrutura</h2>
     {/* Carousel */}
     <div className="
-    w-full h-7/12 lg:h-8/12 rounded-2xl text-white
+    w-full h-8/12 lg:h-8/12 rounded-2xl text-white
     ">
         <Carousel
         setApi={setApi}
@@ -59,7 +59,7 @@ export default function Structure() {
                     return (
                         <CarouselItem key={room.index}
                             className={`
-                                basis-4/5 md:basis-3/5 h-full
+                                basis-4/5 md:basis-3/5 h-96 lg:h-112
                                 transition-opacity duration-500 
                                 rounded-2xl overflow-hidden
                                 p-2
@@ -75,9 +75,10 @@ export default function Structure() {
                                 />
                             </div>
                             <div className="
-                            flex-1 p-2 lg:p-8 flex flex-col gap-2 py-8 lg-py-16 rounded-b-2xl
+                            flex-1 p-4 lg:p-8 flex flex-col gap-2 py-4 lg-py-16 rounded-b-2xl
                             lg:gap-8
                             text-justify text-base lg:text-lg bg-[#a9a685] text-olive-950
+                            overflow-hidden
                             ">
                                 <h3>{room.title}</h3>
                                 {isActive && <p>{room.description}</p>}
