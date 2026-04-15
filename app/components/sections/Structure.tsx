@@ -40,45 +40,49 @@ export default function Structure() {
   return <section id="structure"
   className="
     h-screen
-    py-16 md:py-32 mx-4 lg:mx-32
+    py-8 md:py-16 mx-4 lg:mx-32
     flex flex-col items-center justify-center
+    
   ">
+    <h2>Estrutura</h2>
     {/* Carousel */}
     <div className="
-    w-full h-5/12 lg:h-8/12 rounded-2xl text-white
+    w-full h-7/12 lg:h-8/12 rounded-2xl text-white
     ">
         <Carousel
         setApi={setApi}
         opts={{ align: "center", loop: true }}
         className="w-full h-full [&>div]:h-full"
         >
-            <CarouselContent className="h-full">
+            <CarouselContent className="h-full -ml-1">
                 {rooms.map((room, index) => {
                     const isActive = index === current
                     return (
                         <CarouselItem key={room.index}
-                            className={`basis-5/5 md:basis-3/5 h-full transition-opacity duration-500 rounded-2xl overflow-hidden ${
-                                isActive ? "opacity-100" : "opacity-40"
-                            }`}
+                            className={`
+                                basis-4/5 md:basis-3/5 h-full
+                                bg-[#a9a685]
+                                transition-opacity duration-500 
+                                rounded-2xl overflow-hidden
+                                p-2
+                                flex flex-col
+                                ${isActive ? "opacity-100" : "opacity-40"}`}
                         >
-                            <div className="relative h-full overflow-hidden flex flex-col rounded-2xl">
+                            <div className="relative h-48 w-full overflow-hidden rounded-t-2xl">
                                 <Image
                                 src={room.image}
                                 fill
                                 alt={room.title}
                                 className="object-cover"
                                 />
-                                <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
-                                <div className="
-                                px-4 lg:px-8 py-8 lg-py-16
-                                flex flex-col gap-4 lg:gap-8
-                                relative overflow-hidden
-                                text-base lg:text-lg text-olive-50
-                                mt-auto z-10
-                                ">
-                                    <h3>{room.title}</h3>
-                                    {isActive && <p>{room.description}</p>}
-                                </div>
+                            </div>
+                            <div className="
+                            flex-1 p-2 lg:p-8 flex flex-col gap-2 py-8 lg-py-16
+                            lg:gap-8
+                            text-justify text-base lg:text-lg text-olive-950
+                            ">
+                                <h3>{room.title}</h3>
+                                {isActive && <p>{room.description}</p>}
                             </div>
                         </CarouselItem>
                     )
@@ -88,7 +92,7 @@ export default function Structure() {
     </div>
 
     {/* Botões de navegação do carousel */}
-    <div className="flex items-center gap-4 mt-4">
+    <div className="hidden md:flex items-center gap-4 mt-4">
         <Button variant="outline" onClick={() => api?.scrollPrev()}>
             <Image 
             src="/ux/Assets/arrows/left-green.png"

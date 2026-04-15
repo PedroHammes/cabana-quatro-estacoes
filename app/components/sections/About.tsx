@@ -4,7 +4,7 @@ export default function About() {
   return <section id="about" 
   className="
   h-full
-  py-16 md:py-32 mx-4 lg:mx-32
+  py-8 md:py-16 mx-4 lg:mx-32
   flex flex-col flex-1 items-center justify-center
   ">
 
