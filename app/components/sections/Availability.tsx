@@ -34,33 +34,33 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
   
   return <section id="availability"
   className="
-  py-8 md:py-16  mx-0 lg:mx-32 px-4 max-w-full
+  mx-0 lg:mx-32 px-4 max-w-full
   flex flex-col flex-1 items-center justify-center
   ">
+    <h2>Disponibilidade</h2>
+    <p>Veja a melhor data, entre em contato e faça sua reserva</p>
     {/* Card principal */}
     <div className="
-    flex flex-col flex-1 h-full w-full md:flex-row md:min-h-80 gap-4 min-w-0
-    rounded-2xl overflow-hidden
-    bg-olive-500
+        flex flex-col w-full md:flex-row h-[70vh] md:h-128
+        rounded-2xl overflow-hidden
+        bg-olive-500
     ">
-      <div className="relative h-full rounded-2xl overflow-hidden w-full md:w-[70%]">
-        <Image 
-        src={"/ux/07-availability/reserva.jpg"}
-        alt="Reserva"
-        className="object-cover"
-        fill
-        />
-        <div
-        className="
-        absolute inset-0 z-5 bg-linear-to-r from-transparent to-black/70
-        "></div>
-      </div>
-      <div className="relative h-full rounded-2xl overflow-hidden w-full md:w-[30%]">
-            <iframe
-              src="https://calendar.google.com/calendar/embed?src=SEU_EMAIL_AQUI"
-              className="w-full h-full border-0 rounded-2xl"
+        {/* Imagem */}
+        <div className="relative h-2/5 md:h-auto w-full md:w-2/5">
+            <Image
+                src="/ux/07-availability/reserva.jpg"
+                alt="Reserva"
+                fill
+                className="object-cover"
             />
-      </div>
+        </div>
+        {/* Calendário */}
+        <div className="w-full h-3/5 md:h-auto md:w-3/5 ">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?src=SEU_EMAIL_AQUI"
+                className="w-full h-full border-0"
+            />
+        </div>
     </div>
 
     <Dialog open={Props.open} onOpenChange={Props.setOpen}>
