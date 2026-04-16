@@ -4,12 +4,13 @@ import Image from "next/image";
 export default function Location(Props: {setOpen: (value: boolean) => void}) {
   return <section id="location"
   className="
-    py-16 md:py-32 mx-4 lg:mx-32
-    flex flex-col items-center justify-center
+  mx-4 lg:mx-32
+  flex flex-col items-center justify-center
   ">
+    <h2>Localização</h2>
     {/* Card principal */}
     <div className="
-    flex flex-col md:flex-row-reverse flex-1 h-full w-full md:min-h-80 gap-4
+    flex flex-col md:flex-row-reverse flex-1 h-full w-full md:min-h-80 gap-2
     rounded-2xl
     bg-[#a9a685]
     ">
@@ -36,10 +37,9 @@ export default function Location(Props: {setOpen: (value: boolean) => void}) {
           </p>
           <p className="border-2 rounded-lg border-olive-50 p-2">
             Insira o endereço no GPS antes de entrar na estrada de terra, pois o sinal pode oscilar na região rural.
-            Link do Google Maps: https://maps.app.goo.gl/6bszPtjdBuShpk4o8
+            Link do Google Maps: <a href="https://maps.app.goo.gl/6bszPtjdBuShpk4o8" target="_blank" rel="noopener noreferrer" className="text-blue-700">Cabana Quatro Estações - Seu regúgio romântico na Serra do RJ</a>
           </p>
         </div>
-
       </div>
 
       {/* Card de baixo */}
