@@ -15,19 +15,22 @@ export default function Partnerships() {
             id: 1,
             title: "Passeios de Bugre: Alferes Extremo",
             description: "Passeios na região: Para os que gostam de explorar, temos indicações de passeios pela região, proporcionando contato com a natureza e experiências únicas.",
-            image: "/ux/05-partnerships/photos/alferesextremo.png"
+            image_desktop: "/ux/05-partnerships/fotos/alferesextremo.png",
+            image_mobile: "/ux/05-partnerships/fotos_mobile/alferesextremo.png"
         },
         {
             id: 2,
             title: "Ninha Estética Massoterapeuta",
             description: "Bem-estar: Também indicamos serviços de massoterapia, ideais para quem deseja relaxar e aproveitar momentos de descanso na cabana.",
-            image: "/ux/05-partnerships/photos/ninhaestetica.png"
+            image_desktop: "/ux/05-partnerships/fotos/ninhaestetica.png",
+            image_mobile: "/ux/05-partnerships/fotos_mobile/ninhaestetica.png"
         },
         {
             id: 3,
             title: "Padaria Ágape",
             description: "Café da manhã: Disponibilizamos o fornecimento de deliciosas cestas de café da manhã preparadas pela Padaria Ágape, perfeitas para começar o dia com muito sabor e conforto.",
-            image: "/ux/05-partnerships/photos/padariaagape.png"
+            image_desktop: "/ux/05-partnerships/fotos/padariaagape.png",
+            image_mobile: "/ux/05-partnerships/fotos_mobile/padariaagape.png"
         }
     ]
     const [api, setApi] = React.useState<CarouselApi>()
@@ -35,32 +38,42 @@ export default function Partnerships() {
     
     return <section id="partnerships"
     className="
-    py-8 md:py-16  mx-4 lg:mx-32
+    mx-4 lg:mx-32
     flex flex-col items-center justify-center
     ">
         <h2>Parceiros</h2>
         {/* Card Principal */}
         <div className="
-        w-full h-6/12 lg:h-10/12
-        rounded-2xl overflow-hidden
-        text-white
+        w-full h-8/12 lg:h-8/12 rounded-2xl text-white
         ">
             <Carousel
             setApi={setApi}
             opts={{ align: "center", loop: true }}
             className="w-full h-full [&>div]:h-full">
-                <CarouselContent className="h-full">
+                <CarouselContent className="h-full -ml-1">
                 {
                     partnerships.map((partner) => {
                         return (
                             <CarouselItem key={partner.id}
-                                className="basis-5/5 h-full transition-opacity duration-500">
-                                <div className="relative h-full overflow-hidden flex flex-col">
+                                className="
+                                basis-5/5 h-112
+                                transition-opacity duration-500 
+                                rounded-2xl overflow-hidden
+                                p-2
+                                flex flex-col
+                                ">
+                                <div className="relative h-full w-full overflow-hidden rounded-2xl">
                                     <Image
-                                        src={partner.image}
+                                        src={partner.image_mobile}
                                         alt={partner.title}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover block lg:hidden"
+                                    />
+                                    <Image
+                                        src={partner.image_desktop}
+                                        alt={partner.title}
+                                        fill
+                                        className="object-cover hidden lg:block"
                                     />
                                     <div className="absolute inset-0 z-5 bg-linear-to-l from-black/90 to-transparent"></div>
                                     <div className="

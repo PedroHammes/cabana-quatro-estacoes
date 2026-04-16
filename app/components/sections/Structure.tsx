@@ -41,7 +41,6 @@ export default function Structure() {
   className="
     mx-4 lg:mx-32
     flex flex-col items-center justify-center
-    
   ">
     <h2>Estrutura</h2>
     {/* Carousel */}

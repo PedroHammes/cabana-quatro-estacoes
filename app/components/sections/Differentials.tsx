@@ -76,7 +76,7 @@ export default function Differentials() {
                         />
                     </div>
                     <div className="flex-1 p-2 lg:p-4 flex flex-col gap-2 text-base rounded-b-2xl bg-[#a9a685] text-olive-50 text-center">
-                        <h3>{detail.title}</h3>
+                        <h4>{detail.title}</h4>
                     </div>
                 </CarouselItem>
             )
