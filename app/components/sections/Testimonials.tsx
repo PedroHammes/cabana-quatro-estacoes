@@ -22,29 +22,32 @@ export default function Testimonials() {
         { id: 7, name: "Juliana", lastname: "", text: "Fui com meu noivo somente para passar uma noite e foi a melhor escolha que fizemos. Que local lindo, extremamente aconchegante e agradável. Para quem está buscando tranquilidade, privacidade, paz e natureza é o local ideal. Todos os espaços da cabana oferecem muito conforto e são extremamente úteis. A roupa de cama e os travesseiros são maravilhosos e as toalhas estavam super cheirosas, me senti em casa! O contato com o anfitrião foi excelente. Com certeza voltaremos para ficar mais dias.", rating: 5, date: "", image: "" },
     ]
 
-    const chunks = testimonials.reduce((acc, _, i) =>
-        i % 3 === 0 ? [...acc, testimonials.slice(i, i + 3)] : acc, [] as typeof testimonials[]
-    )
-
 return <section id="testimonials"
     className="
-    h-screen py-16 md:py-32 mx-4 lg:mx-32 flex flex-col items-center justify-center gap-8
+    mx-4 lg:mx-32 flex flex-col items-center justify-center gap-8
     ">
 
+    <h2>Depoimentos</h2>
     {/* Contador */}
     <div className="
-    flex flex-col md:flex-row w-full md:w-[70%] mx-auto items-center justify-around
-    bg-card rounded-2xl p-4
-    gap-8 px-4 md:px-12 py-6
+    flex flex-row w-full md:w-[70%] mx-auto items-center justify-around
+    rounded-2xl p-4
+    gap-2
+    bg-olive-500
     ">
-        <p className="text-lg font-semibold">Estamos no ar desde Abril de 2025</p>
-        <p className="text-lg font-semibold">245 hospedagens</p>
-        <div className="flex flex-row gap-1">
-            <Star className="fill-yellow-400 text-yellow-400"/>
-            <Star className="fill-yellow-400 text-yellow-400"/>
-            <Star className="fill-yellow-400 text-yellow-400"/>
-            <Star className="fill-yellow-400 text-yellow-400"/>
-            <Star className="fill-yellow-400 text-yellow-400"/>
+        <p className="text-xs text-center">Estamos no ar desde <strong>Abril de 2025</strong></p>
+
+        <p className="text-xs md:text-base lg:text-lg font-semibold text-center"><strong>245</strong> Hospedagens</p>
+
+        <div className="flex flex-col gap-1">
+            <div className="flex flex-row">
+                <Star className="fill-yellow-400 text-yellow-400"/>
+                <Star className="fill-yellow-400 text-yellow-400"/>
+                <Star className="fill-yellow-400 text-yellow-400"/>
+                <Star className="fill-yellow-400 text-yellow-400"/>
+                <Star className="fill-yellow-400 text-yellow-400"/>
+            </div>
+            <p className="text-center text-xs">Avaliação do Google</p>
         </div>
     </div>
 
@@ -55,25 +58,21 @@ return <section id="testimonials"
     ">
         <Carousel className="w-full h-full [&>div]:h-full overflow-hidden">
             <CarouselContent className="h-full">
-                {chunks.map((chunk, i) => (
-                    <CarouselItem key={i} className="h-full basis-full">
-                        <div className="flex flex-row gap-6 h-full p-6">
-                            {chunk.map((feedback) => (
-                                <div key={feedback.id} className="bg-card rounded-2xl p-5 flex-1 overflow-hidden min-w-0 flex flex-col gap-2">
-                                    <div className="flex flex-row items-center gap-3">
-                                        <Avatar className="w-8 h-8">
-                                            <AvatarImage src={feedback.image} alt={feedback.name} />
-                                            <AvatarFallback className="text-xs">{feedback.name[0]}{feedback.lastname[0]}</AvatarFallback>
-                                        </Avatar>
-                                        <p className="font-semibold text-sm">{feedback.name}</p>
-                                    </div>
-                                    <p className="text-sm leading-snug">{feedback.text}</p>
-                                    <div className="flex flex-row justify-between items-center mt-auto pt-2">
-                                        <p className="text-xs text-muted-foreground">{feedback.date}</p>
-                                        <p className="text-sm">{feedback.rating} <Star className="fill-yellow-400 text-yellow-400 inline w-4 h-4" /></p>
-                                    </div>
-                                </div>
-                            ))}
+                {testimonials.map((feedback, i) => (
+                    <CarouselItem key={feedback.id} className="basis-6/12 h-full p-2">
+                        <div className="bg-olive-500 rounded-2xl p-5 h-full overflow-hidden flex flex-col gap-4">
+                            <div className="flex flex-row items-center gap-3">
+                                <Avatar className="w-8 h-8">
+                                    <AvatarImage src={feedback.image} alt={feedback.name} />
+                                    <AvatarFallback className="text-xs">{feedback.name[0]}{feedback.lastname[0]}</AvatarFallback>
+                                </Avatar>
+                                <p className="font-semibold text-sm">{feedback.name}</p>
+                            </div>
+                            <p className="text-sm leading-snug">{feedback.text}</p>
+                            <div className="flex flex-row justify-between items-center mt-auto pt-2">
+                                <p className="text-xs text-muted-foreground">{feedback.date}</p>
+                                <p className="text-sm">{feedback.rating} <Star className="fill-yellow-400 text-yellow-400 inline w-4 h-4" /></p>
+                            </div>
                         </div>
                     </CarouselItem>
                 ))}

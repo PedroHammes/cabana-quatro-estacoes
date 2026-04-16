@@ -37,13 +37,13 @@ export default function Differentials() {
 
   return <section id="differentials"
   className="
-    h-screen
-    py-16 md:py-32 mx-4 lg:mx-32
+    mx-4 lg:mx-32
     flex flex-col items-center justify-center
   ">
 
+    <h2>Diferenciais</h2>
     <div className="
-      w-full h-6/12 lg:h-8/12
+      w-full h-4/12 lg:h-8/12
       rounded-2xl overflow-hidden
     text-white
     ">
@@ -52,33 +52,37 @@ export default function Differentials() {
           opts={{ align: "center", loop: true }}
           className="w-full h-full [&>div]:h-full"
         >
-            <CarouselContent className="h-full">
-                {
-                    details.map((detail, index) => {
-                        const isActive = index === current
-                        return (
-                            <CarouselItem key={detail.title}
-                                className={`basis-5/5 md:basis-3/5 h-full transition-opacity duration-500 ${
-                                    isActive ? "opacity-100" : "opacity-40"
-                                }`}
-                            >
-                                <div className="relative h-full overflow-hidden flex flex-col rounded-2xl">
-                                    <Image
-                                        src={detail.image}
-                                        fill
-                                        alt={detail.title}
-                                        className="object-cover"
-                                    />
-                                    <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent"></div>
-                                    <div className="relative mt-auto p-4 z-10">
-                                        <h3>{detail.title}</h3>
-                                    </div>
-                                </div>
-                            </CarouselItem>
-                        )
-                    })
-                }
-            </CarouselContent>
+<CarouselContent className="h-full -ml-1">
+    {
+        details.map((detail, index) => {
+            const isActive = index === current
+            return (
+                <CarouselItem key={detail.title}
+                    className={`
+                        basis-6/12 lg:basis-4/12 h-full 
+                        transition-opacity duration-500
+                        rounded-2xl overflow-hidden
+                        p-2
+                        flex flex-col 
+                        ${isActive ? "opacity-100" : "opacity-40"}
+                    `}
+                >
+                    <div className="relative h-48 w-full overflow-hidden rounded-t-2xl">
+                        <Image
+                            src={detail.image}
+                            fill
+                            alt={detail.title}
+                            className="object-cover"
+                        />
+                    </div>
+                    <div className="flex-1 p-2 lg:p-4 flex flex-col gap-2 text-base rounded-b-2xl bg-[#a9a685] text-olive-50 text-center">
+                        <h4>{detail.title}</h4>
+                    </div>
+                </CarouselItem>
+            )
+        })
+    }
+</CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
         </Carousel>
