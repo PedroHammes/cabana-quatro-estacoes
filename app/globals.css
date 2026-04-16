@@ -90,4 +90,6 @@
   button, [role="button"] {
     cursor: pointer;
   }
+  footer { background-color: var(--olive-500); }
+  footer h3 { text-align: center;}
 }

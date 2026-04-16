@@ -32,7 +32,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     ${isHero ? "bg-transparent" : "bg-olive-500"}
     `}>
     <Image
-      src="/ux/assets/logos/airbnbB.png"
+      src="/ux/Assets/logos/B.png"
       alt="Cabana Quatro Estações"
       width={120}
       height={40}

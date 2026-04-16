@@ -53,6 +53,5 @@ export default function Team(Props: {setOpen: (value: boolean) => void}) {
             ))}
         </div>
     </div>
-    <Footer setOpen={Props.setOpen}/>
   </section>
 }

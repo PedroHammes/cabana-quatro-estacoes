@@ -101,17 +101,20 @@ export default function Availability(Props: {open: boolean, setOpen: (value: boo
                           format(date.from, "LLL dd, y")
                         )
                       ) : (
-                        <span>Pick a date</span>
+                        <span>Selecione uma data</span>
                       )}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
-                      mode="range"
-                      defaultMonth={date?.from}
-                      selected={date}
-                      onSelect={setDate}
-                      numberOfMonths={2}
+                    mode="range"
+                    captionLayout="dropdown"
+                    startMonth={new Date()}
+                    endMonth={new Date(new Date().getFullYear() + 1, 11)}
+                    defaultMonth={date?.from}
+                    selected={date}
+                    onSelect={setDate}
+                    numberOfMonths={2}
                     />
                   </PopoverContent>
                 </Popover>

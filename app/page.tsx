@@ -28,6 +28,7 @@ export default function Home() {
         <Testimonials />
         <Availability open={open} setOpen={setOpen}/>
         <Team setOpen={setOpen}/>
+        <Footer setOpen={setOpen}/>
         <WhatsAppButton setOpen={setOpen}/>
     </main>
   )
