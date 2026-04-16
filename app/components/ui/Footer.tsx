@@ -4,7 +4,7 @@ import { FaAirbnb, FaFacebook, FaWhatsapp, FaTwitter, FaInstagram, FaTiktok } fr
 import Image from "next/image";
 
 export default function Footer(Props: {setOpen: (value: boolean) => void}) {
-    return <footer className="bg-card py-16 px-4 md:px-12 md:py-32 flex flex-col justify-center text-white">
+    return <footer className="bg-olive-500 py-16 px-4 md:px-12 md:py-32 flex flex-col justify-center text-white">
         
         {/* Card Principal */}
         <div className="flex flex-col md:flex-row gap-8 flex-1 h-full">
