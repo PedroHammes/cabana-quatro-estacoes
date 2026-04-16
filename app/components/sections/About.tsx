@@ -17,7 +17,7 @@ export default function About() {
         relative h-48 md:h-auto w-full md:w-2/5
         ">
             <Image
-                src="/ux/03-about/about.png"
+                src="/ux/03-about/about.webp"
                 fill={true}
                 alt="Luxo na natureza"
 
