@@ -3,6 +3,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Star } from "lucide-react"
+import { type CarouselApi } from "@/components/ui/carousel"
+import React from "react";
+import Image from "next/image";
 
 
 export default function Testimonials() {
@@ -21,6 +24,7 @@ export default function Testimonials() {
 
         { id: 7, name: "Juliana", lastname: "", text: "Fui com meu noivo somente para passar uma noite e foi a melhor escolha que fizemos. Que local lindo, extremamente aconchegante e agradável. Para quem está buscando tranquilidade, privacidade, paz e natureza é o local ideal. Todos os espaços da cabana oferecem muito conforto e são extremamente úteis. A roupa de cama e os travesseiros são maravilhosos e as toalhas estavam super cheirosas, me senti em casa! O contato com o anfitrião foi excelente. Com certeza voltaremos para ficar mais dias.", rating: 5, date: "", image: "" },
     ]
+    const [api, setApi] = React.useState<CarouselApi>()
 
 return <section id="testimonials"
     className="
@@ -31,13 +35,17 @@ return <section id="testimonials"
     {/* Contador */}
     <div className="
     flex flex-row w-full md:w-[70%] mx-auto items-center justify-around
-    rounded-2xl p-4
+    rounded-2xl px-4 py-2
     gap-2
     bg-olive-500
     ">
-        <p className="text-xs text-center">Estamos no ar desde <strong>Abril de 2025</strong></p>
+        <p className="text-xs lg:text-xl text-center">Estamos no ar desde <strong>Abril de 2025</strong></p>
 
-        <p className="text-xs md:text-base lg:text-lg font-semibold text-center"><strong>245</strong> Hospedagens</p>
+        <p 
+        className="text-xs md:text-base lg:text-lg font-semibold text-center border-x-2 border-x-emerald-800 lg:px-32"
+        >
+            <strong className="lg:text-5xl">245</strong> <br />Hospedagens
+        </p>
 
         <div className="flex flex-col gap-1">
             <div className="flex flex-row">
@@ -56,10 +64,10 @@ return <section id="testimonials"
         w-full
         rounded-2xl overflow-hidden text-white
     ">
-        <Carousel className="w-full h-full [&>div]:h-full overflow-hidden">
+        <Carousel setApi={setApi} className="w-full h-full [&>div]:h-full overflow-hidden">
             <CarouselContent className="h-full">
                 {testimonials.map((feedback, i) => (
-                    <CarouselItem key={feedback.id} className="basis-6/12 h-full p-2">
+                    <CarouselItem key={feedback.id} className="basis-6/12 lg:basis-4/12 h-full p-2">
                         <div className="bg-olive-500 rounded-2xl p-5 h-full overflow-hidden flex flex-col gap-4">
                             <div className="flex flex-row items-center gap-3">
                                 <Avatar className="w-8 h-8">
@@ -82,15 +90,32 @@ return <section id="testimonials"
         </Carousel>
     </div>
 
-    <div className="flex justify-center">
-        <Button asChild
-        className="rounded-full  hover:bg-[#4a5c44] hover:color-[#FFFFFF]  cursor-pointer"
-        style={{ color: '#ffffff', fontWeight: 'bold' }}
-        >
-            <a href="https://www.google.com/travel/search?q=cabana%20quatro%20esta%C3%A7%C3%B5es&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C121529349&hl=pt-BR&gl=br&cs=1&ssta=1&ts=CAEaRQonEiUyIzB4OTkxYjM0NzI2NTE2NGI6MHgzYzI2YzQyOWU1NDdiNTY3EhoSFAoHCOoPEAQYBRIHCOoPEAQYBhgBMgIQAA&qs=CAEyE0Nnb0k1LXFlcXA2RnNaTThFQUU4AkIJCWe1R-UpxCY8QgkJZ7VH5SnEJjw&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiYuNiN5c-TAxUAAAAAHQAAAAAQBA" target="_blank">
-                Deixe seu depoimento
-            </a>
+    {/* Botões de navegação do carousel */}
+    <div className="hidden md:flex items-center gap-4 mt-4">
+        <Button variant="ghost" onClick={() => api?.scrollPrev()}>
+            <Image 
+            src="/ux/Assets/arrows/left-green.png"
+            width={20}
+            height={20}
+            alt="Previous" />
+        </Button>
+        <span>
+            <Button asChild
+            className="border-2 bg-olive-500 rounded-full"
+            >
+                <a href="https://www.google.com/travel/search?q=cabana%20quatro%20esta%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer">
+                    Deixe seu depoimento
+                </a>
+            </Button>
+        </span>
+        <Button variant="ghost" onClick={() => api?.scrollNext()}>
+            <Image 
+            src="/ux/Assets/arrows/right-green.png"
+            width={20}
+            height={20}
+            alt="Next" />
         </Button>
     </div>
+
 </section>
 }
