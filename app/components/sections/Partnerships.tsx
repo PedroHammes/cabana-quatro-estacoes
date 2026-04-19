@@ -34,11 +34,10 @@ export default function Partnerships() {
         }
     ]
     const [api, setApi] = React.useState<CarouselApi>()
-    const [current, setCurrent] = React.useState(0)
     
     return <section id="partnerships"
     className="
-    mx-4 lg:mx-32
+    mx-4 lg:mx-64
     flex flex-col items-center justify-center
     ">
         <h2>Parceiros</h2>
@@ -56,7 +55,7 @@ export default function Partnerships() {
                         return (
                             <CarouselItem key={partner.id}
                                 className="
-                                basis-5/5 h-112
+                                basis-5/5 h-112 lg:h-160
                                 transition-opacity duration-500 
                                 rounded-2xl overflow-hidden
                                 p-2
