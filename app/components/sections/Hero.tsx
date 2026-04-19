@@ -17,7 +17,7 @@ export default function Hero() {
     
     <div className="
     relative z-10
-    flex flex-col lg:flex-row items-center
+    flex flex-col items-center
     w-full
     px-12 md:px-24 gap-4
     ">
@@ -31,7 +31,9 @@ export default function Hero() {
       <h1 
       style={{color: "#ffffff"}}
       className="text-lg lg:text-5xl"
-      >LUXO NA NATUREZA</h1>
+      >
+        SOFISTICAÇÃO E CONFORTO EM MEIO A NATUREZA
+      </h1>
     </div>
 
   </section>

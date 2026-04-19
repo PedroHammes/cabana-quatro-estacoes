@@ -115,7 +115,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
       <div className="flex items-center gap-2">
         <Button
         onClick={() => Props.setOpen(true)}
-        className="rounded-full  hover:bg-[#4a5c44] hover:color-[#FFFFFF]  cursor-pointer"
+        className="rounded-full  bg-[#a9a685] color-[#FFFFFF]  cursor-pointer"
         style={{ color: '#ffffff', fontWeight: 'bold' }}
         >
           FAÇA SUA RESERVA
