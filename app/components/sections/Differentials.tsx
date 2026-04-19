@@ -52,40 +52,66 @@ export default function Differentials() {
           opts={{ align: "center", loop: true }}
           className="w-full h-full [&>div]:h-full"
         >
-<CarouselContent className="h-full -ml-1">
-    {
-        details.map((detail, index) => {
-            const isActive = index === current
-            return (
-                <CarouselItem key={detail.title}
-                    className={`
-                        basis-6/12 lg:basis-4/12 h-full 
-                        transition-opacity duration-500
-                        rounded-2xl overflow-hidden
-                        p-2
-                        flex flex-col 
-                        ${isActive ? "opacity-100" : "opacity-40"}
-                    `}
-                >
-                    <div className="relative h-48 w-full overflow-hidden rounded-t-2xl">
-                        <Image
-                            src={detail.image}
-                            fill
-                            alt={detail.title}
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="flex-1 p-2 lg:p-4 flex flex-col gap-2 text-base rounded-b-2xl bg-[#a9a685] text-olive-50 text-center">
-                        <h4>{detail.title}</h4>
-                    </div>
-                </CarouselItem>
-            )
-        })
-    }
-</CarouselContent>
+            <CarouselContent className="h-full -ml-1">
+                {
+                    details.map((detail, index) => {
+                        const isActive = index === current
+                        return (
+                            <CarouselItem key={detail.title}
+                                className={`
+                                    basis-6/12 lg:basis-3/12 h-full 
+                                    transition-opacity duration-500
+                                    rounded-2xl overflow-hidden
+                                    p-2
+                                    flex flex-col 
+                                    ${isActive ? "opacity-100" : "opacity-40"}
+                                `}
+                            >
+                                <div className="relative h-48 lg:h-64 w-full overflow-hidden rounded-2xl">
+                                    <Image
+                                        src={detail.image}
+                                        fill
+                                        alt={detail.title}
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div className="flex-1 p-2 lg:p-4 flex flex-col gap-2 text-base rounded-b-2xl text-olive-50 text-center">
+                                    <h4>{detail.title}</h4>
+                                </div>
+                            </CarouselItem>
+                        )
+                    })
+                }
+            </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
         </Carousel>
+    </div>
+    {/* Botões de navegação do carousel */}
+    <div className="hidden md:flex items-center gap-4 mt-4">
+        <Button variant="ghost" onClick={() => api?.scrollPrev()}>
+            <Image 
+            src="/ux/Assets/arrows/left-green.png"
+            width={20}
+            height={20}
+            alt="Previous" />
+        </Button>
+        <span>
+            <Button asChild
+            className="border-2 bg-olive-500 rounded-full"
+            >
+                <a href="https://www.instagram.com/cabana.quatroestacoes/" target="_blank" rel="noopener noreferrer">
+                    Veja todas as fotos
+                </a>
+            </Button>
+        </span>
+        <Button variant="ghost" onClick={() => api?.scrollNext()}>
+            <Image 
+            src="/ux/Assets/arrows/right-green.png"
+            width={20}
+            height={20}
+            alt="Next" />
+        </Button>
     </div>
 </section>
 }
