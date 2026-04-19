@@ -1,8 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from "next/image"
-import Footer from "../ui/Footer"
 
-export default function Team(Props: {setOpen: (value: boolean) => void}) {
+export default function Team() {
     const team = [
         {
             id: 1,

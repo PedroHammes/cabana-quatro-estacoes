@@ -139,7 +139,6 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
         </a>
       </div>
     </div>
-
     
   </nav>
 }

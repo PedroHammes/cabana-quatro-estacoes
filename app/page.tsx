@@ -12,10 +12,11 @@ import Team from "@/app/components/sections/Team"
 import WhatsAppButton from "@/app/components/ui/WhatsAppButton"
 import { useState } from "react"
 import Footer from "./components/ui/Footer"
+import BookingDialog from "@/app/components/ui/BookingDialog"
 
 export default function Home() {
   const [open, setOpen] = useState(false)
-  console.log("Dialog open:", open)
+
   return (
     <main className="
     pt-16 overflow-y-scroll overflow-x-hidden scroll-smooth h-screen">
@@ -27,10 +28,11 @@ export default function Home() {
         <Partnerships />
         <Location setOpen={setOpen}/>
         <Testimonials />
-        <Availability open={open} setOpen={setOpen}/>
-        <Team setOpen={setOpen}/>
+        <Availability setOpen={setOpen}/>
+        <Team />
         <Footer setOpen={setOpen}/>
         <WhatsAppButton setOpen={setOpen}/>
+        <BookingDialog open={open} setOpen={setOpen} />
     </main>
   )
 }

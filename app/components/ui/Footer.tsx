@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer(Props: {setOpen: (value: boolean) => void}) {
@@ -57,7 +58,7 @@ return <footer className="
                 onClick={() => Props.setOpen(true)}
                 className="rounded-full bg-[#4e6646] cursor-pointer w-full lg:w-fit"
                 style={{ color: '#ffffff', fontWeight: 'bold' }}>
-                ENTRE EM CONTATO E FAÇA SURA RESERVA
+                ENTRE EM CONTATO E FAÇA SUA RESERVA
             </Button>
         </div>
 
@@ -66,10 +67,10 @@ return <footer className="
             <h2>VANTAGENS DE RESERVAR DIRETAMENTE CONOSCO</h2>
             <div className="grid grid-cols-3 gap-4 w-fit">
                 {advantages.map((item) => (
-                    <>
+                    <React.Fragment key={item.label}>
                         <img key={item.label} src={item.icon} alt={item.label} width={80} height={80} className="block lg:hidden" />
                         <img key={item.label} src={item.icon} alt={item.label} width={140} height={140}  className="hidden lg:block"/>
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
             <div className="flex items-center gap-2">
