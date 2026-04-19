@@ -14,15 +14,15 @@ import React from "react";
 
 export default function Structure() {
     const rooms = [
-        { index: 1, title: "Sala", description: "Internet - TV  - Vitrola Retrô - Iluminação aconchegante - Decoração - Sofá - Mini adega de vinhos", image: "/ux/04-structure/photos/sala.jpg"
+        { index: 1, title: "Sala", description: "Smart TV de 65 polegadas, caixa de som portátil, uma vitrola vintage com discos, Wi-Fi de banda larga e cantinhos para leitura com poltronas aconchegantes e iluminação, decoração , sofá, mini adega de vinhos.", fotos_mob: "/ux/04-structure/fotos-mob/sala.jpg", fotos_desk: "/ux/04-structure/fotos-desk/sala.png"
         },
-        { index: 2, title: "Cozinha", description: "Forno elétrico - Air Fryer - Máquina de café - Água Potável - Pipoqueira - Cooktop 4 bocas - Liquidificador - Aparelho de Fondue - Panelas e Taças - Sanduicheira - Abridor de vinho - Ralador - Mesa para café da manhã na cama - Garrafa térmica - Toalha de picnic", image: "/ux/04-structure/photos/cozinha.jpg"
+        { index: 2, title: "Cozinha", description: "Forno elétrico, cooktop de 4 bocas, geladeira, air fryer, máquina de café, água potável, pipoqueira, sanduicheira, liquidificador, aparelho de fondue, panelas completas, taças, abridor de vinho, ralador, garrafa térmica, mesa para café da manhã na cama e toalha de piquenique", fotos_mob: "/ux/04-structure/fotos-mob/cozinha.jpg", fotos_desk: "/ux/04-structure/fotos-desk/cozinha.png"
         },
-        { index: 3, title: "Banheiro", description: "Choveiro com água aquecida - Toalhas - Papel higiênico", image: "/ux/04-structure/photos/banheiro.jpg"
+        { index: 3, title: "Banheiro", description: "Banheiro com chuveiro a gás, toalhas de banho e rosto, amenities (shampoo,condicionador e sabonete), roupões, papel higiênico, ducha higiênica,secador de cabelo e aromatização do ambiente", fotos_mob: "/ux/04-structure/fotos-mob/banheiro.jpg", fotos_desk: "/ux/04-structure/fotos-desk/banheiro.png"
         },
-        { index: 4, title: "Quarto", description: "Cama - Ar condicionado - Travesseiros e lençóis - Persiana elétrica", image: "/ux/04-structure/photos/quarto.jpg"
+        { index: 4, title: "Quarto", description: "Acomodamos confortavelmente até 4 hóspedes. Cama, ar condicionado, lençóis macios e aconchegantes de 400 fios, cobertores, travesseiros extras, abajures, armários de cabeceira e Persiana elétrica.", fotos_mob: "/ux/04-structure/fotos-mob/quarto.jpg", fotos_desk: "/ux/04-structure/fotos-desk/quarto.png"
         },
-        { index: 5, title: "Área Externa", description: "Ofurô relaxante aquecido - Fogo de Chão - Pergolado - Balanço - Rendário - Chuveirão no quintal - Mirante com vista - Churrasqueira", image: "/ux/04-structure/photos/area-externa.jpg"
+        { index: 5, title: "Área Externa", description: "A área externa é um show à parte. Ofurô com vista para as montanhas, redário suspenso, mesa bistrô,churrasqueira com utensílios, chuveiro externo, fogo de chão com cadeiras estilo pavão, um lindo balanço, jardim e um deck com pergolado.", fotos_mob: "/ux/04-structure/fotos-mob/area-externa.jpg", fotos_desk: "/ux/04-structure/fotos-desk/area-externa.png"
     }
     ]
 
@@ -58,23 +58,29 @@ export default function Structure() {
                     return (
                         <CarouselItem key={room.index}
                             className={`
-                                basis-4/5 md:basis-3/5 h-96 lg:h-112
+                                basis-4/5 md:basis-3/5 h-96 lg:h-160
                                 transition-opacity duration-500 
                                 rounded-2xl overflow-hidden
                                 p-2
                                 flex flex-col
                                 ${isActive ? "opacity-100" : "opacity-40"}`}
                         >
-                            <div className="relative h-48 w-full overflow-hidden rounded-t-2xl">
+                            <div className="relative h-48 lg:h-8/12 w-full overflow-hidden rounded-t-2xl">
                                 <Image
-                                src={room.image}
+                                src={room.fotos_mob}
                                 fill
                                 alt={room.title}
-                                className="object-cover"
+                                className="object-cover block lg:hidden"
+                                />
+                                <Image
+                                src={room.fotos_desk}
+                                fill
+                                alt={room.title}
+                                className="object-cover hidden lg:block"
                                 />
                             </div>
                             <div className="
-                            flex-1 p-4 lg:p-8 flex flex-col gap-2 py-4 lg-py-16 rounded-b-2xl
+                            flex-1 px-4 lg:px-12 flex flex-col gap-2 py-4 lg-py-8 rounded-b-2xl
                             lg:gap-8
                             text-justify text-base lg:text-lg bg-[#a9a685] text-olive-950
                             overflow-hidden
@@ -91,7 +97,7 @@ export default function Structure() {
 
     {/* Botões de navegação do carousel */}
     <div className="hidden md:flex items-center gap-4 mt-4">
-        <Button variant="outline" onClick={() => api?.scrollPrev()}>
+        <Button variant="ghost" onClick={() => api?.scrollPrev()}>
             <Image 
             src="/ux/Assets/arrows/left-green.png"
             width={20}
@@ -99,13 +105,15 @@ export default function Structure() {
             alt="Previous" />
         </Button>
         <span>
-            <Button
-            className="border-2 border-[#ffffff] bg-transparent rounded-full"
+            <Button asChild
+            className="border-2 bg-olive-500 rounded-full"
             >
-                Veja todas as fotos
+                <a href="https://www.instagram.com/cabana.quatroestacoes/" target="_blank" rel="noopener noreferrer">
+                    Veja todas as fotos
+                </a>
             </Button>
         </span>
-        <Button variant="outline" onClick={() => api?.scrollNext()}>
+        <Button variant="ghost" onClick={() => api?.scrollNext()}>
             <Image 
             src="/ux/Assets/arrows/right-green.png"
             width={20}

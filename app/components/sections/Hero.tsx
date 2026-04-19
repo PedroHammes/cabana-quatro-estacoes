@@ -22,15 +22,15 @@ export default function Hero() {
     px-12 md:px-24 gap-4
     ">
       <Image
-      src={"/ux/01-navbar/logos/B.png"}
-      alt="Luxo na natureza"
+      src={"/ux/Assets/logos/c4e_desk.png"}
+      alt="Logo c4e"
       width={400}
       height={200}
       className="hidden lg:block"
       />
       <h1 
       style={{color: "#ffffff"}}
-      className="text-lg lg:text-5xl"
+      className="text-lg lg:text-5xl lg:font-thin"
       >
         SOFISTICAÇÃO E CONFORTO EM MEIO A NATUREZA
       </h1>

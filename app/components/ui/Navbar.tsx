@@ -29,7 +29,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     flex items-center justify-between
     fixed top-0 left-0 right-0 z-50
     transition-opacity duration-300
-    ${isHero ? "bg-transparent" : "bg-olive-500"}
+    bg-olive-500
     `}>
     <Image
       src="/ux/Assets/logos/B.png"
@@ -115,7 +115,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
       <div className="flex items-center gap-2">
         <Button
         onClick={() => Props.setOpen(true)}
-        className="rounded-full  bg-[#a9a685] color-[#FFFFFF]  cursor-pointer"
+        className="rounded-full  bg-[#b8b596] color-[#FFFFFF]  cursor-pointer"
         style={{ color: '#ffffff', fontWeight: 'bold' }}
         >
           FAÇA SUA RESERVA
