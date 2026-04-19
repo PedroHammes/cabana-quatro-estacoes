@@ -82,7 +82,66 @@ return <section id="availability"
 
     {/* Dialog mantém igual */}
     <Dialog open={Props.open} onOpenChange={Props.setOpen}>
-        {/* ... todo o conteúdo do Dialog permanece idêntico ... */}
+        <form>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Agendamento</DialogTitle>
+            <DialogDescription>
+              Informe seu nome e data que deseja se hospedar.
+            </DialogDescription>
+          </DialogHeader>
+          <div>
+            <div>
+              <Label htmlFor="name">Nome:</Label>
+              <Input id="name" name="name" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div>
+              <Label htmlFor="date">Data:</Label>
+              <div className="mx-auto w-60">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                    variant="outline"
+                    id="date-picker-range"
+                    className="justify-start px-2.5 font-normal"
+                    >
+                      <Calendar1Icon/>
+                      {date?.from ? (
+                        date.to ? (
+                          <>
+                            {format(date.from, "LLL dd, y")} -{""}
+                            {format(date.to, "LLL dd, y")}
+                          </>
+                        ) : (
+                          format(date.from, "LLL dd, y")
+                        )
+                      ) : (
+                        <span>Selecione uma data</span>
+                      )}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar
+                    mode="range"
+                    captionLayout="dropdown"
+                    startMonth={new Date()}
+                    endMonth={new Date(new Date().getFullYear() + 1, 11)}
+                    defaultMonth={date?.from}
+                    selected={date}
+                    onSelect={setDate}
+                    numberOfMonths={2}
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+            </div>
+          </div>
+          <Button onClick={handleSubmit}>Agendar</Button>
+        </DialogContent>
+      </form>
     </Dialog>
 </section>
 }

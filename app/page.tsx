@@ -15,6 +15,7 @@ import Footer from "./components/ui/Footer"
 
 export default function Home() {
   const [open, setOpen] = useState(false)
+  console.log("Dialog open:", open)
   return (
     <main className="
     pt-16 overflow-y-scroll overflow-x-hidden scroll-smooth h-screen">
