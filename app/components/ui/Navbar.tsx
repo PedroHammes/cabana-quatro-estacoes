@@ -32,7 +32,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
     bg-olive-500
     `}>
     <Image
-      src="/ux/Assets/logos/B.png"
+      src="/ux/Assets/logos/c4e_mob.png"
       alt="Cabana Quatro Estações"
       width={120}
       height={40}
