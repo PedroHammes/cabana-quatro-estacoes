@@ -18,8 +18,8 @@ export default function Differentials() {
         {index: 2, title: "Pitfire", image: "/ux/04-structure/diferenciais/photos/02pitfire.png"},
         {index: 3, title: "Ofurô", image: "/ux/04-structure/diferenciais/photos/03ofuro.jpg"},
         {index: 4, title: "Rede Suspensa", image: "/ux/04-structure/diferenciais/photos/04redesuspensa.jpg"},
-        {index: 5, title: "Balanço", image: "/ux/04-structure/diferenciais/photos/05balanco.jpg"},
-        {index: 6, title: "Modelo", image: "/ux/04-structure/diferenciais/photos/06modelo.jpg"},
+        {index: 5, title: "Balanço", image: "/ux/04-structure/diferenciais/photos/05balanco.png"},
+        {index: 6, title: "Modelo", image: "/ux/04-structure/diferenciais/photos/06modelo.png"},
         {index: 7, title: "Pergolato", image: "/ux/04-structure/diferenciais/photos/07pergolato.jpg"},
         {index: 8, title: "Vista", image: "/ux/04-structure/diferenciais/photos/08vista.jpg"},
         {index: 9, title: "Vitrola Retrô", image: "/ux/04-structure/diferenciais/photos/09vitrolaretro.jpg"}

@@ -39,12 +39,12 @@ return <section id="testimonials"
     gap-2
     bg-olive-500
     ">
-        <p className="text-xs lg:text-xl text-center">Estamos no ar desde <strong>Abril de 2025</strong></p>
+        <p className="text-xs lg:text-xl text-center">Estamos no ar desde <strong>Abril de 2025</strong></p>sssssssss
 
         <p 
         className="text-xs md:text-base lg:text-lg font-semibold text-center border-x-2 border-x-emerald-800 lg:px-32"
         >
-            <strong className="lg:text-5xl">245</strong> <br />Hospedagens
+            <strong className="text-xl lg:text-5xl">245</strong> <br />Hospedagens
         </p>
 
         <div className="flex flex-col gap-1">

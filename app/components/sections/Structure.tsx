@@ -20,7 +20,7 @@ export default function Structure() {
         },
         { index: 3, title: "Banheiro", description: "Banheiro com chuveiro a gás, toalhas de banho e rosto, amenities (shampoo,condicionador e sabonete), roupões, papel higiênico, ducha higiênica,secador de cabelo e aromatização do ambiente", fotos_mob: "/ux/04-structure/fotos-mob/banheiro.jpg", fotos_desk: "/ux/04-structure/fotos-desk/banheiro.png"
         },
-        { index: 4, title: "Quarto", description: "Acomodamos confortavelmente até 4 hóspedes. Cama, ar condicionado, lençóis macios e aconchegantes de 400 fios, cobertores, travesseiros extras, abajures, armários de cabeceira e Persiana elétrica.", fotos_mob: "/ux/04-structure/fotos-mob/quarto.jpg", fotos_desk: "/ux/04-structure/fotos-desk/quarto.png"
+        { index: 4, title: "Quarto", description: "Acomodamos confortavelmente até 4 hóspedes. Cama, ar condicionado, lençóis macios e aconchegantes de 400 fios, cobertores, travesseiros extras, abajures, armários de cabeceira e Persiana elétrica.", fotos_mob: "/ux/04-structure/fotos-mob/quarto.jpg", fotos_desk: "/ux/04-structure/fotos-desk/quarto.jpg"
         },
         { index: 5, title: "Área Externa", description: "A área externa é um show à parte. Ofurô com vista para as montanhas, redário suspenso, mesa bistrô,churrasqueira com utensílios, chuveiro externo, fogo de chão com cadeiras estilo pavão, um lindo balanço, jardim e um deck com pergolado.", fotos_mob: "/ux/04-structure/fotos-mob/area-externa.jpg", fotos_desk: "/ux/04-structure/fotos-desk/area-externa.png"
     }
@@ -58,7 +58,7 @@ export default function Structure() {
                     return (
                         <CarouselItem key={room.index}
                             className={`
-                                basis-4/5 md:basis-3/5 h-96 lg:h-160
+                                basis-4/5 md:basis-3/5 h-122 lg:h-176
                                 transition-opacity duration-500 
                                 rounded-2xl overflow-hidden
                                 p-2

@@ -15,21 +15,22 @@ export default function Footer(Props: {setOpen: (value: boolean) => void}) {
     ]
 
 return <footer className="
-    bg-olive-500 py-8 px-4 md:px-12 flex flex-col items-center gap-4 text-white
+    bg-olive-500 py-8 pb-24 px-4 md:px-32 flex flex-col items-center gap-4 text-white
 ">
     {/* Layout principal: duas colunas no desktop */}
-    <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-32">
+    <div className="flex flex-col lg:flex-row w-full lg:gap-16">
 
         {/* Coluna esquerda: foto + ícones + botão */}
-        <div className="flex flex-col gap-4 lg:w-1/2">
+        <div className="flex flex-col gap-4 lg:w-1/2 items-center">
             <img src="/ux/09-footer/img-footer.png" alt="Footer" className="rounded-2xl w-full h-48 lg:h-96 object-cover" />
             
-            <div className="flex flex-row items-center gap-8">
-                <div className="flex flex-col gap-2 lg:px-8 border-r-2 border-olive-50">
+            {/* Redes sociais e sites de hospedagem */}
+            <div className="flex flex-row py-4 w-full items-center gap-8">
+                <div className="flex flex-col gap-2 lg:px-8 lg:border-r-2 lg:border-olive-50">
                     <p className="text-xs">Estamos nos principais sites de hospedagem:</p>
                     <div className="flex items-center gap-3">
                         <a href="https://www.airbnb.com.br/rooms/1400061823556658830?source_impression_id=p3_1772281259_P34iLZv0dPF_d_p7" target="_blank" rel="noopener noreferrer"
-                        className="lg:px-4 border-r-2 border-olive-50">
+                        className="lg:px-4 lg:border-r-2 lg:border-olive-50">
                             <img src="/ux/Assets/logos/airbnb+logo.png" alt="Airbnb" width={100} height={100} />
                         </a>
                         <a href="https://www.booking.com/hotel/br/cabana-quatro-estacoes.pt-br.html" target="_blank" rel="noopener noreferrer"
@@ -38,7 +39,7 @@ return <footer className="
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col gap-2 lg:px-8 border-r-2 border-olive-50">
+                <div className="flex flex-col gap-2 lg:px-8 lg:border-r-2 lg:border-olive-50">
                     <p className="text-xs">Redes sociais:</p>
                     <div className="flex items-center gap-3">
                         <a href="https://www.facebook.com/cabanaquatroestacoesrj/" target="_blank" rel="noopener noreferrer">
@@ -56,16 +57,16 @@ return <footer className="
 
             <Button 
                 onClick={() => Props.setOpen(true)}
-                className="rounded-full bg-[#4e6646] cursor-pointer w-full lg:w-fit"
+                className="rounded-full bg-[#4e6646] cursor-pointer w-full hidden lg:block"
                 style={{ color: '#ffffff', fontWeight: 'bold' }}>
                 ENTRE EM CONTATO E FAÇA SUA RESERVA
             </Button>
         </div>
 
         {/* Coluna direita: vantagens + contato */}
-        <div className="flex flex-col gap-4 lg:w-1/2 items-center">
-            <h2>VANTAGENS DE RESERVAR DIRETAMENTE CONOSCO</h2>
-            <div className="grid grid-cols-3 gap-4 w-fit">
+        <div className="flex flex-col py-4 gap-4 w-full max-w-xl items-center">
+            <h2 className="text-xl lg:text-3xl w-full text-center ">VANTAGENS DE RESERVAR <br />DIRETAMENTE CONOSCO</h2>
+            <div className="grid grid-cols-3 gap-4">
                 {advantages.map((item) => (
                     <React.Fragment key={item.label}>
                         <img key={item.label} src={item.icon} alt={item.label} width={80} height={80} className="block lg:hidden" />
@@ -79,9 +80,15 @@ return <footer className="
             <div className="flex items-center gap-2">
                 <Mail size={24}/> <p>cabana.quatroestacoes@gmail.com</p>
             </div>
+            <Button 
+                onClick={() => Props.setOpen(true)}
+                className="rounded-full bg-[#4e6646] cursor-pointer w-full block lg:hidden"
+                style={{ color: '#ffffff', fontWeight: 'bold' }}>
+                ENTRE EM CONTATO E FAÇA SUA RESERVA
+            </Button>
         </div>
     </div>
 
-    <p className="text-sm">© 2026 - Cabana Quatro Estações — CNPJ: 00.000.000/0000-00. Todos os direitos reservados.</p>
+    <p className="text-sm">© 2026 - Cabana Quatro Estações — CNPJ: 60.370.375/0001-75. Todos os direitos reservados.</p>
 </footer>
 }
