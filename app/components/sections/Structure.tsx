@@ -22,7 +22,7 @@ export default function Structure() {
         },
         { index: 4, title: "Quarto", description: "Acomodamos confortavelmente até 4 hóspedes. Cama, ar condicionado, lençóis macios e aconchegantes de 400 fios, cobertores, travesseiros extras, abajures, armários de cabeceira e Persiana elétrica.", fotos_mob: "/ux/04-structure/fotos-mob/quarto.jpg", fotos_desk: "/ux/04-structure/fotos-desk/quarto.jpg"
         },
-        { index: 5, title: "Área Externa", description: "A área externa é um show à parte. Ofurô com vista para as montanhas, redário suspenso, mesa bistrô,churrasqueira com utensílios, chuveiro externo, fogo de chão com cadeiras estilo pavão, um lindo balanço, jardim e um deck com pergolado.", fotos_mob: "/ux/04-structure/fotos-mob/area-externa.jpg", fotos_desk: "/ux/04-structure/fotos-desk/area-externa.png"
+        { index: 5, title: "Área Externa", description: "A área externa é um show à parte. Ofurô com vista para as montanhas, redário suspenso, mesa bistrô,churrasqueira com utensílios, chuveiro externo, fogo de chão com cadeiras estilo pavão, um lindo balanço, jardim e um deck com pergolado.", fotos_mob: "/ux/04-structure/fotos-mob/area-externa.jfif", fotos_desk: "/ux/04-structure/fotos-desk/area-externa.png"
     }
     ]
 
