@@ -15,14 +15,16 @@ import React from "react";
 export default function Differentials() {
     const details = [
         {index: 1, title: "Claraboia", image: "/ux/04-structure/diferenciais/photos/01claraboia.jpg"},
-        {index: 2, title: "Pitfire", image: "/ux/04-structure/diferenciais/photos/02pitfire.png"},
+        {index: 2, title: "Pitfire", image: "/ux/04-structure/diferenciais/photos/02-pitfire-desk.png"},
         {index: 3, title: "Ofurô", image: "/ux/04-structure/diferenciais/photos/03ofuro.jpg"},
         {index: 4, title: "Rede Suspensa", image: "/ux/04-structure/diferenciais/photos/04redesuspensa.jpg"},
-        {index: 5, title: "Balanço", image: "/ux/04-structure/diferenciais/photos/05balanco.png"},
+        {index: 5, title: "Balanço", image: "/ux/04-structure/diferenciais/photos/05balanco-desk.png"},
         {index: 6, title: "Modelo", image: "/ux/04-structure/diferenciais/photos/06modelo.png"},
         {index: 7, title: "Pergolato", image: "/ux/04-structure/diferenciais/photos/07pergolato.jpg"},
         {index: 8, title: "Vista", image: "/ux/04-structure/diferenciais/photos/08vista.jpg"},
         {index: 9, title: "Vitrola Retrô", image: "/ux/04-structure/diferenciais/photos/09vitrolaretro.jpg"}
+        ,
+        {index: 10, title: "Rendário", image: "/ux/04-structure/diferenciais/photos/10-rendario-desk.png"}
     ]
 
     const [api, setApi] = React.useState<CarouselApi>()

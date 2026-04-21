@@ -20,10 +20,12 @@ export default function Structure() {
         },
         { index: 3, title: "Banheiro", description: "Banheiro com chuveiro a gás, toalhas de banho e rosto, amenities (shampoo,condicionador e sabonete), roupões, papel higiênico, ducha higiênica,secador de cabelo e aromatização do ambiente", fotos_mob: "/ux/04-structure/fotos-mob/banheiro.jpg", fotos_desk: "/ux/04-structure/fotos-desk/banheiro.png"
         },
-        { index: 4, title: "Quarto", description: "Acomodamos confortavelmente até 4 hóspedes. Cama, ar condicionado, lençóis macios e aconchegantes de 400 fios, cobertores, travesseiros extras, abajures, armários de cabeceira e Persiana elétrica.", fotos_mob: "/ux/04-structure/fotos-mob/quarto.jpg", fotos_desk: "/ux/04-structure/fotos-desk/quarto.jpg"
+        { index: 4, title: "Quarto Mezanino", description: "Cama, ar condicionado, macios e aconchegantes de 400 fios, cobertores, travesseiros extras, abajures, armários de cabeceira e Persiana elétrica.", fotos_mob: "/ux/04-structure/fotos-mob/quarto-mezanino.jpg", fotos_desk: "/ux/04-structure/fotos-desk/quarto-mezanino.png"
         },
         { index: 5, title: "Área Externa", description: "A área externa é um show à parte. Ofurô com vista para as montanhas, redário suspenso, mesa bistrô,churrasqueira com utensílios, chuveiro externo, fogo de chão com cadeiras estilo pavão, um lindo balanço, jardim e um deck com pergolado.", fotos_mob: "/ux/04-structure/fotos-mob/area-externa.jfif", fotos_desk: "/ux/04-structure/fotos-desk/area-externa.png"
-    }
+        },
+        { index: 6, title: "Quarto Térreo", description: "Cama, ar condicionado, lençóis macios e aconchegantes de 400 fios, cobertores, travesseiros extras, abajures e armários de cabeceira.", fotos_mob: "/ux/04-structure/fotos-mob/quarto-terreo.jpeg", fotos_desk: "/ux/04-structure/fotos-desk/quarto-terreo.png"
+        }
     ]
 
     const [api, setApi] = React.useState<CarouselApi>()
@@ -82,7 +84,7 @@ export default function Structure() {
                             <div className="
                             flex-1 px-4 lg:px-12 flex flex-col gap-2 py-4 lg-py-8 rounded-b-2xl
                             lg:gap-8
-                            text-justify text-base lg:text-lg bg-[#a9a685] text-olive-950
+                            text-start text-base lg:text-lg bg-[#a9a685] text-olive-950
                             overflow-hidden
                             ">
                                 <h3>{room.title}</h3>

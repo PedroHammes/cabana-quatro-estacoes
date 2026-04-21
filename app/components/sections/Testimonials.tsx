@@ -39,7 +39,7 @@ return <section id="testimonials"
     gap-2
     bg-olive-500
     ">
-        <p className="text-xs lg:text-xl text-center">Estamos no ar desde <strong>Abril de 2025</strong></p>sssssssss
+        <p className="text-xs lg:text-xl text-center">Estamos no ar desde <strong>Abril de 2025</strong></p>
 
         <p 
         className="text-xs md:text-base lg:text-lg font-semibold text-center border-x-2 border-x-emerald-800 lg:px-32"

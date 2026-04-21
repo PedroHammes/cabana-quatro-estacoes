@@ -74,7 +74,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
                 text-xs
                 cursor-pointer"
                 >
-                ENTRE EM CONTATO E FAÇA SUA RESERVA
+                FAÇA SUA RESERVA
                 </Button>
 
                 <p>Estamos nos sites de hospedagens</p>

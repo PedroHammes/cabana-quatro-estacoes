@@ -30,7 +30,7 @@ export default function Hero() {
       />
       <h1 
       style={{color: "#ffffff"}}
-      className="text-lg lg:text-5xl lg:font-thin"
+      className="text-lg lg:text-5xl lg:font-thin text-center"
       >
         SOFISTICAÇÃO E CONFORTO EM MEIO A NATUREZA
       </h1>
