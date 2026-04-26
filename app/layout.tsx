@@ -5,6 +5,9 @@ import { Playfair_Display, Lato } from 'next/font/google'
 export const metadata: Metadata = {
   title: "Cabana Quatro Estações",
   description: "Seu refúgio romântico na serra",
+  icons: {
+    icon: "/favicon.png"
+  }
 };
 
 export const viewport = {

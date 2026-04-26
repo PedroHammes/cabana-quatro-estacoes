@@ -10,8 +10,13 @@ export default function Hero() {
   ">
     <video
     autoPlay muted loop playsInline
-    className="absolute inset-0 w-full h-full object-cover">
+    className="absolute inset-0 w-full h-full object-cover hidden lg:block">
       <source src="/ux/02-hero/hero.mp4" type="video/mp4" />
+    </video>
+    <video
+    autoPlay muted loop playsInline
+    className="absolute inset-0 w-full h-full object-cover block lg:hidden">
+      <source src="/ux/02-hero/hero-mobile.mp4" type="video/mp4" />
     </video>
     <div className="absolute inset-0 z-5 bg-linear-to-t from-black/70 to-transparent pointer-events-none"></div> 
     
