@@ -23,7 +23,7 @@ return <section id="availability"
           <h2>Disponibilidade</h2>
           <p>Veja a melhor data, entre em contato e faça sua reserva</p>
             <iframe
-                src="https://calendar.google.com/calendar/embed?src=cabana.quatroestacoes%40gmail.com&ctz=America%2FSao_Paulo&src=db6bruh8njn6gb5alh51vc37nsnmr6l5@import.calendar.google.com&src=56ha7rrk40oh92cdq8er0ef60feeag9c@import.calendar.google.com"
+                src="https://calendar.google.com/calendar/embed?src=cabana.quatroestacoes%40gmail.com&ctz=America%2FSao_Paulo&src=db6bruh8njn6gb5alh51vc37nsnmr6l5@import.calendar.google.com&src=56ha7rrk40oh92cdq8er0ef60feeag9c@import.calendar.google.com&src=ufrscjbjsub35i9mst11jp58q7m256qd@import.calendar.google.com"
                 className="w-full border-0 rounded-2xl h-64 lg:flex-1"
             />
             <Button
