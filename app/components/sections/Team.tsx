@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { WHATSAPP_NUMBER } from "@/lib/constants"
 
 export default function Team() {
     const team = [
@@ -44,7 +45,7 @@ export default function Team() {
                         </h3>
                         <p className="text-sm lg:text-xl">{member.description}</p>
                         <a 
-                            href="https://wa.me/5521999439858" 
+                            href={`https://wa.me/5521983917758`}
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="mt-4 lg:mt-32 border rounded-full px-6 py-2 w-fit bg-olive-500 text-white"
