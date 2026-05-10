@@ -29,11 +29,15 @@ return <footer className="
                 <div className="flex flex-col gap-2 lg:px-8 lg:border-r-2 lg:border-olive-50">
                     <p className="text-xs">Estamos nos principais sites de hospedagem:</p>
                     <div className="flex items-center gap-3">
-                        <a href="https://www.airbnb.com.br/rooms/1400061823556658830?source_impression_id=p3_1772281259_P34iLZv0dPF_d_p7" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.airbnb.com.br/rooms/1400061823556658830?source_impression_id=p3_1772281259_P34iLZv0dPF_d_p7"
+                        data-umami-event="click-airbnb"
+                        target="_blank" rel="noopener noreferrer"
                         className="lg:px-4 lg:border-r-2 lg:border-olive-50">
                             <img src="/ux/Assets/logos/airbnb+logo.png" alt="Airbnb" width={100} height={100} />
                         </a>
-                        <a href="https://www.booking.com/hotel/br/cabana-quatro-estacoes.pt-br.html" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.booking.com/hotel/br/cabana-quatro-estacoes.pt-br.html" 
+                        data-umami-event="click-booking"
+                        target="_blank" rel="noopener noreferrer"
                         className="lg:px-4">
                             <img src="/ux/Assets/logos/bookingcom.png" alt="Booking" width={140} height={140} />
                         </a>

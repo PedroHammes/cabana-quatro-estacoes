@@ -46,9 +46,11 @@ export default function Team() {
                         <p className="text-sm lg:text-xl">{member.description}</p>
                         <a 
                             href={`https://wa.me/5521983917758`}
+                            data-umami-event="click-whatsapp"
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="mt-4 lg:mt-32 border rounded-full px-6 py-2 w-fit bg-olive-500 text-white"
+
                             >
                             Fale com {member.name.split(" ")[0]}
                         </a>
