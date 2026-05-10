@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Playfair_Display, Lato } from 'next/font/google'
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Cabana Quatro Estações",
@@ -37,7 +38,13 @@ export default function RootLayout({
       lang="pt-BR"
       className={`h-full antialiased ${playfair.variable} ${lato.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children}
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="c6465b66-ad92-4529-a453-9c0cc1905a60"
+        />
+      </body>
     </html>
   );
 }
