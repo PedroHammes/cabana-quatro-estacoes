@@ -131,7 +131,9 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
             height={24}
           /> 
         </a>
-        <a href="https://www.booking.com/Share-N86BXf" target="_blank" className="hidden md:block">
+        <a href={BOOKING_URL} target="_blank" 
+        data-umami-event="click-booking"
+        className="hidden md:block">
           <Image
             src="/ux/Assets/logos/bookingB.png"
             alt="Booking"
