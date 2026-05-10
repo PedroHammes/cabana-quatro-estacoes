@@ -1,1 +1,7 @@
 export const WHATSAPP_NUMBER = "5521983917758"
+export const AIRBNB_URL = "https://www.airbnb.com.br/rooms/1400061823556658830?source_impression_id=p3_1772281259_P34iLZv0dPF_d_p7"
+export const BOOKING_URL = "https://www.booking.com/hotel/br/cabana-quatro-estacoes.pt-br.html"
+export const INSTAGRAM_URL = "https://www.instagram.com/cabana.quatroestacoes/"
+export const FACEBOOK_URL = "https://www.facebook.com/cabanaquatroestacoesrj/"
+export const TIKTOK_URL = "https://www.tiktok.com/@cabana.quatroestacoes"
+export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/6bszPtjdBuShpk4o8"

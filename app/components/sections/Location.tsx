@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export default function Location(Props: {setOpen: (value: boolean) => void}) {
   return <section id="location"
@@ -36,7 +37,7 @@ export default function Location(Props: {setOpen: (value: boolean) => void}) {
           </p>
           <p className="border-2 rounded-lg border-olive-50 p-2">
             Insira o endereço no GPS antes de entrar na estrada de terra, pois o sinal pode oscilar na região rural.
-            Link do Google Maps: <a href="https://maps.app.goo.gl/6bszPtjdBuShpk4o8" target="_blank" rel="noopener noreferrer" className="text-blue-700">Cabana Quatro Estações - Seu regúgio romântico na Serra do RJ</a>
+            Link do Google Maps: <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-blue-700">Cabana Quatro Estações - Seu regúgio romântico na Serra do RJ</a>
           </p>
         </div>
         <Button

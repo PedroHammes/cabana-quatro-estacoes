@@ -8,6 +8,7 @@ import {
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Menu } from "lucide-react"
+import { AIRBNB_URL, BOOKING_URL } from "@/lib/constants"
 
 export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
   const [isHero, setIsHero] = useState(true)
@@ -80,7 +81,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
                 <p>Estamos nos sites de hospedagens</p>
                 <div className="flex flex-row gap-4">
                   <div className="flex flex-row border-r-2 px-2">
-                    <a href="https://www.airbnb.com.br/rooms/1400061823556658830?source_impression_id=p3_1772281259_P34iLZv0dPF_d_p7">
+                    <a href={AIRBNB_URL} data-umami-event="click-airbnb">
                       <Image
                         src="/ux/Assets/logos/airbnbB.png"
                         alt="Airbnb"
@@ -91,7 +92,8 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
                     <p>airbnb</p>
                   </div>
                   <div className="flex flex-row p2-4">
-                    <a href="https://www.booking.com/hotel/br/cabana-quatro-estacoes.pt-br.html?label=gen173bo-10CAsoIEIWY2FiYW5hLXF1YXRyby1lc3RhY29lc0gzWANoIIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAZgCBqgCAbgC-pWmzQbAAgHSAiRiN2ZkNDMyNS1iNThkLTQ5YzUtOWFlMi02NGFjODU4NGFhMzLYAgHgAgE&sid=2e3d372595898ebf39f4570c99632b57&dist=0&group_adults=2&sb_price_type=total&type=total&">
+                    <a href={BOOKING_URL} data-umami-event="click-booking"
+                    >
                     </a>
                     <p>Booking.com</p>
                   </div>

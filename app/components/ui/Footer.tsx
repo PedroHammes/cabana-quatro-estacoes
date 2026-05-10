@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { AIRBNB_URL, BOOKING_URL, FACEBOOK_URL, INSTAGRAM_URL, TIKTOK_URL } from "@/lib/constants";
 import { Mail } from "lucide-react";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -29,13 +30,13 @@ return <footer className="
                 <div className="flex flex-col gap-2 lg:px-8 lg:border-r-2 lg:border-olive-50">
                     <p className="text-xs">Estamos nos principais sites de hospedagem:</p>
                     <div className="flex items-center gap-3">
-                        <a href="https://www.airbnb.com.br/rooms/1400061823556658830?source_impression_id=p3_1772281259_P34iLZv0dPF_d_p7"
+                        <a href={AIRBNB_URL}
                         data-umami-event="click-airbnb"
                         target="_blank" rel="noopener noreferrer"
                         className="lg:px-4 lg:border-r-2 lg:border-olive-50">
                             <img src="/ux/Assets/logos/airbnb+logo.png" alt="Airbnb" width={100} height={100} />
                         </a>
-                        <a href="https://www.booking.com/hotel/br/cabana-quatro-estacoes.pt-br.html" 
+                        <a href={BOOKING_URL} 
                         data-umami-event="click-booking"
                         target="_blank" rel="noopener noreferrer"
                         className="lg:px-4">
@@ -46,13 +47,13 @@ return <footer className="
                 <div className="flex flex-col gap-2 lg:px-8 lg:border-r-2 lg:border-olive-50">
                     <p className="text-xs">Redes sociais:</p>
                     <div className="flex items-center gap-3">
-                        <a href="https://www.facebook.com/cabanaquatroestacoesrj/" target="_blank" rel="noopener noreferrer">
+                        <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
                             <img src="/ux/Assets/logos/facebookB.png" alt="Facebook" width={32} height={32} />
                         </a>
-                        <a href="https://www.instagram.com/cabana.quatroestacoes/" target="_blank" rel="noopener noreferrer">
+                        <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
                             <img src="/ux/Assets/logos/instagramB.png" alt="Instagram" width={32} height={32} />
                         </a>
-                        <a href="https://www.tiktok.com/@cabana.quatroestacoes" target="_blank" rel="noopener noreferrer">
+                        <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer">
                             <img src="/ux/Assets/logos/tiktokB.png" alt="TikTok" width={32} height={32} />
                         </a>
                     </div>

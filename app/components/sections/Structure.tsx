@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import { type CarouselApi } from "@/components/ui/carousel"
 import React from "react";
+import { INSTAGRAM_URL } from "@/lib/constants";
 
 export default function Structure() {
     const rooms = [
@@ -110,7 +111,7 @@ export default function Structure() {
             <Button asChild
             className="border-2 bg-olive-500 rounded-full"
             >
-                <a href="https://www.instagram.com/cabana.quatroestacoes/" target="_blank" rel="noopener noreferrer">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
                     Veja todas as fotos
                 </a>
             </Button>
