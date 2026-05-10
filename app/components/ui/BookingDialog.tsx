@@ -11,6 +11,12 @@ import { format } from "date-fns"
 import { Calendar } from "@/components/ui/calendar"
 import { WHATSAPP_NUMBER } from "@/lib/constants"
 
+declare global {
+  interface Window {
+    umami?: { track: (event: string) => void }
+  }
+}
+
 export default function BookingDialog({ open, setOpen }: { open: boolean, setOpen: (value: boolean) => void }) {
     const [name, setName] = useState("")
     const [date, setDate] = useState<DateRange | undefined>()
@@ -20,6 +26,10 @@ export default function BookingDialog({ open, setOpen }: { open: boolean, setOpe
             alert("Para prosseguir é necessário informar NOME e DATA")
             return
         }
+
+        // Rastreia o evento no Umami
+        window.umami?.track("click-agendar")
+
         const message = `Nome: ${name}%0ADatas: ${format(date!.from!, "dd/MM/yyyy")} a ${format(date!.to!, "dd/MM/yyyy")}`
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank")
     }
