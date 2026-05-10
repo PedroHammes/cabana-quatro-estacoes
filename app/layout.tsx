@@ -40,7 +40,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">{children}
         <Script
-          defer
           src="https://cloud.umami.is/script.js"
           data-website-id="c6465b66-ad92-4529-a453-9c0cc1905a60"
         />
