@@ -17,6 +17,12 @@ declare global {
   }
 }
 
+ declare global {
+    interface Window {
+        fbq?: (...args: unknown[]) => void
+    }
+ }
+
 export default function BookingDialog({ open, setOpen }: { open: boolean, setOpen: (value: boolean) => void }) {
     const [name, setName] = useState("")
     const [date, setDate] = useState<DateRange | undefined>()
@@ -31,6 +37,7 @@ export default function BookingDialog({ open, setOpen }: { open: boolean, setOpe
         window.umami?.track("click-agendar")
 
         const message = `Nome: ${name}%0ADatas: ${format(date!.from!, "dd/MM/yyyy")} a ${format(date!.to!, "dd/MM/yyyy")}`
+        window.fbq?.('track', 'Lead')
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank")
     }
 

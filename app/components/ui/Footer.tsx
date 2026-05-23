@@ -32,11 +32,13 @@ return <footer className="
                     <div className="flex items-center gap-3">
                         <a href={AIRBNB_URL}
                         data-umami-event="click-airbnb"
+                        onClick={() => window.fbq?.('track', 'ViewContent', { content_name: 'Airbnb' })}
                         target="_blank" rel="noopener noreferrer"
                         className="lg:px-4 lg:border-r-2 lg:border-olive-50">
                             <img src="/ux/Assets/logos/airbnb+logo.png" alt="Airbnb" width={100} height={100} />
                         </a>
                         <a href={BOOKING_URL} 
+                        onClick={() => window.fbq?.('track', 'ViewContent', { content_name: 'Booking' })}
                         data-umami-event="click-booking"
                         target="_blank" rel="noopener noreferrer"
                         className="lg:px-4">

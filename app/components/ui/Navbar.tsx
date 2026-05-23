@@ -81,7 +81,9 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
                 <p>Estamos nos sites de hospedagens</p>
                 <div className="flex flex-row gap-4">
                   <div className="flex flex-row border-r-2 px-2">
-                    <a href={AIRBNB_URL} data-umami-event="click-airbnb">
+                    <a href={AIRBNB_URL} data-umami-event="click-airbnb"
+                    onClick={() => window.fbq?.('track', 'ViewContent', { content_name: 'Airbnb' })}
+                    >
                       <Image
                         src="/ux/Assets/logos/airbnbB.png"
                         alt="Airbnb"
@@ -93,6 +95,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
                   </div>
                   <div className="flex flex-row p2-4">
                     <a href={BOOKING_URL} data-umami-event="click-booking"
+                      onClick={() => window.fbq?.('track', 'ViewContent', { content_name: 'Booking' })}
                     >
                     </a>
                     <p>Booking.com</p>
@@ -123,7 +126,10 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
           FAÇA SUA RESERVA
         </Button>
 
-        <a href="https://www.airbnb.com.br/rooms/1400061823556658830?guests=1&adults=1&s=67&unique_share_id=77cdcf28-af7f-4b2a-a09f-d209e4e47331" target="_blank" className="hidden md:block">
+        <a href={AIRBNB_URL} target="_blank" className="hidden md:block"
+        data-umami-event="click-airbnb"
+        onClick={() => window.fbq?.('track', 'ViewContent', { content_name: 'Airbnb' })}
+        >
           <Image
             src="/ux/Assets/logos/airbnbB.png"
             alt="Airbnb"
@@ -132,6 +138,7 @@ export default function Navbar(Props: {setOpen: (value: boolean) => void}) {
           /> 
         </a>
         <a href={BOOKING_URL} target="_blank" 
+        onClick={() => window.fbq?.('track', 'ViewContent', { content_name: 'Booking' })}
         data-umami-event="click-booking"
         className="hidden md:block">
           <Image
