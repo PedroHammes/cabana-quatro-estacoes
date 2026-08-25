@@ -82,7 +82,7 @@ return <footer className="
                 ))}
             </div>
             <div className="flex items-center gap-2">
-                <FaWhatsapp size={24}/> <p>(021) 9 9943-9858</p>
+                <FaWhatsapp size={24}/> <p>(21) 9 8391-7758</p>
             </div>
             <div className="flex items-center gap-2">
                 <Mail size={24}/> <p>cabana.quatroestacoes@gmail.com</p>
