@@ -37,7 +37,8 @@ export default function Hero() {
       style={{color: "#ffffff"}}
       className="text-lg lg:text-5xl lg:font-thin text-center"
       >
-        SOFISTICAÇÃO E CONFORTO EM MEIO A NATUREZA
+        SOFISTICAÇÃO E CONFORTO EM MEIO À NATUREZA <br />
+        Diárias a partir de R$ 1.050,00
       </h1>
     </div>
 

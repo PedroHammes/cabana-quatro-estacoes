@@ -2,62 +2,51 @@ import Image from "next/image"
 import { WHATSAPP_NUMBER } from "@/lib/constants"
 
 export default function Team() {
-    const team = [
-        {
-            id: 1,
-            name: "Juliana Martins",
-            title: "ATENDENTE",
-            description: "Coanfitriã com foco em proporcionar uma experiência impecável , acolhedora e inesquecível.",
-            image: "/ux/08-team/juliana.png"
-        }
-    ]
 
   return <section id="team" className="snap-start">
-    <div 
+    <div
     className="
-    mx-0 lg:mx-64 px-4 max-w-full mb-4
+    mx-auto px-4 max-w-full lg:max-w-4xl mb-4
     flex flex-col flex-1 items-center justify-center
     ">
-        <div className="
-        flex flex-col md:flex-row flex-1 h-full w-full md:min-h-80 lg:min-h-144
-        rounded-2xl overflow-hidden
-        bg-[#a9a685] text-white
-        ">
-            {team.map((member) => (
-                <div key={member.id} className="flex flex-col md:flex-row w-full">
-                    {/* Imagem */}
-                    <div className="relative flex-1 min-h-[40vh]">
-                        <Image
-                            src={member.image}
-                            alt={member.name}
-                            className="object-cover"
-                            fill
-                        />
-                    </div>
-                    {/* Texto */}
-                    <div className="flex-1 p-4 lg:p-12 flex flex-col justify-center gap-4 lg:gap-8">
-                        <h3>
-                            {member.name}
-                            <br />
-                            <span className="text-sm lg:text-xl font-thin tracking-widest">
-                                {member.title}
-                            </span>
-                        </h3>
-                        <p className="text-sm lg:text-xl">{member.description}</p>
-                        <a 
-                            href={`https://wa.me/5521983917758`}
-                            data-umami-event="click-whatsapp"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="mt-4 lg:mt-32 border rounded-full px-6 py-2 w-fit bg-olive-500 text-white"
-
-                            >
-                            Fale com {member.name.split(" ")[0]}
-                        </a>
-                    </div>
-                </div>
-            ))}
+      <div className="
+      flex flex-col md:flex-row w-full
+      md:min-h-[35vh]
+      rounded-2xl overflow-hidden
+      bg-[#a9a685] text-white
+      ">
+        {/* Imagem */}
+        <div className="relative w-full md:w-1/2 min-h-[40vh] md:min-h-0">
+          <Image
+            src="/ux/08-team/team.png"
+            alt="Atendente pronta para ajudar com sua reserva"
+            className="object-cover"
+            fill
+          />
         </div>
+
+        {/* Texto */}
+        <div className="
+        w-full md:w-1/2 p-6 lg:p-12
+        flex flex-col justify-center gap-4
+        ">
+          <h3 className="text-4xl lg:text-6xl font-bold leading-tight">
+            Entre em contato!
+          </h3>
+          <p className="text-base lg:text-2xl">
+            Faça sua reserva pelo WhatsApp.
+          </p>
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            data-umami-event="click-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 border rounded-full px-6 py-2 w-fit bg-accent text-white"
+          >
+            Fale com uma atendente
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 }
